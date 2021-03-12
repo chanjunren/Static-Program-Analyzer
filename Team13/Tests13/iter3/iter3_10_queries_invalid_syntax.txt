@@ -1,0 +1,75 @@
+1 - Semantic: declarations - same synonyms within a declaration
+procedure p, p;
+Select p
+none
+5000
+2 - Semantic: declarations - same synonyms across declarations
+procedure p; stmt s; if p;
+Select p
+none
+5000
+3 - Syntactic: integer - not in positive range (> 0)
+stmt s;
+Select s such that Follows (s, -1)
+none
+5000
+4 - Syntactic: integer - first digit is 0
+stmt s;
+Select s such that Follows (01, s)
+none
+5000
+5 - Syntactic: IDENT - first letter is digit
+procedure 4p;
+Select p
+none
+5000
+6 - Syntactic: IDENT - contains symbols
+procedure s{z;
+Select s{z
+none
+5000
+7 - Syntactic : missing comma
+procedure p q;
+Select BOOLEAN
+none
+5000
+8 - Syntactic : caps design ent
+Procedure p;
+Select BOOLEAN
+none
+5000
+9 - Syntactic : SelecT
+stmt s;
+SelecT BOOLEAN
+none
+5000
+10 - Syntactic : such that wrong case
+stmt s1, s2;
+Select BOOLEAN such thaT Follows (s1, 10)
+none
+5000
+11 - Syntactic : Follows wrong case
+stmt s1, s2;
+Select BOOLEAN such that follows (s2, 10)
+none
+5000
+12 - Syntactic : with wrong case for with
+stmt s1;
+Select BOOLEAN wiTh s1.stmt# = 10
+none
+5000
+13 - Syntactic : double such that
+stmt s1;
+Select BOOLEAN such that such that Follows (s1, 10)
+none
+5000
+14 - Syntactic : ProcName wrong case
+procedure p;
+Select BOOLEAN such that p.ProcName="dmp"
+none
+5000
+15 - Syntactic : Extra spacing between such that
+stmt s;
+Select BOOLEAN such  that Follows (s, 10)
+none
+5000

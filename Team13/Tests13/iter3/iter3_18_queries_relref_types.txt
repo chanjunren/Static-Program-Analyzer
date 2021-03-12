@@ -1,0 +1,75 @@
+1 - Syntax Error, string inside stmt ref
+procedure proc1, proc2; stmt s1, s2, s3; assign a1, a2, a3; call call1, call2, call3; while w1, w2; if ifs1, ifs2; read re1, re2; print pr1, pr2; variable v1, v2, v3; constant c1, c2, c3; prog_line n1, n2, n3; 
+Select BOOLEAN such that Affects(_, "affects")
+none
+5000
+2 - Syntax Error, integer inside ent ref
+procedure proc1, proc2; stmt s1, s2, s3; assign a1, a2, a3; call call1, call2, call3; while w1, w2; if ifs1, ifs2; read re1, re2; print pr1, pr2; variable v1, v2, v3; constant c1, c2, c3; prog_line n1, n2, n3; 
+Select BOOLEAN such that Calls( 123, "affects")
+none
+5000
+3 - Semantics Error, undeclared synonym
+procedure p;
+Select BOOLEAN such that Calls (p,p2)
+FALSE
+5000
+4 - Valid - Testing args for Uses
+procedure p; stmt s; assign a; call cl; while w; if ifs; read re; print pr; variable v; constant c; prog_line n; 
+Select BOOLEAN such that Uses (p, v)
+TRUE
+5000
+5 - Valid - Testing args for Uses
+procedure p; stmt s; assign a; call cl; while w; if ifs; read re; print pr; variable v; constant c; prog_line n; 
+Select BOOLEAN such that Uses (a, v)
+TRUE
+5000
+6 - Valid - Testing args for Uses
+procedure p; stmt s; assign a; call cl; while w; if ifs; read re; print pr; variable v; constant c; prog_line n; 
+Select BOOLEAN such that Uses (pr, v)
+TRUE
+5000
+7 - Valid - Testing args for Uses
+procedure p; stmt s; assign a; call cl; while w; if ifs; read re; print pr; variable v; constant c; prog_line n; 
+Select BOOLEAN such that Uses (re, v)
+FALSE
+5000
+8 - Valid - Testing args for Uses (false because no such relation)
+procedure p; stmt s; assign a; call cl; while w; if ifs; read re; print pr; variable v; constant c; prog_line n; 
+Select BOOLEAN such that Uses (ifs, v)
+FALSE
+5000
+9 - Valid - Testing args for Uses (false because no such relation)
+procedure p; stmt s; assign a; call cl; while w; if ifs; read re; print pr; variable v; constant c; prog_line n; 
+Select BOOLEAN such that Uses (ifs, v)
+FALSE
+5000
+10 - Invalid - Testing args for Uses (first arg cannot be read) semantics error
+procedure p; stmt s; assign a; call cl; while w; if ifs; read re; print pr; variable v; constant c; prog_line n; 
+Select BOOLEAN such that Uses (re, v)
+FALSE
+5000
+11 - Valid - Testing args for Modifies
+procedure p; stmt s; assign a; call cl; while w; if ifs; read re; print pr; variable v; constant c; prog_line n; 
+Select BOOLEAN such that Modifies (p, v)
+TRUE
+5000
+12 - Valid - Testing args for Modifies (can be read)
+procedure p; stmt s; assign a; call cl; while w; if ifs; read re; print pr; variable v; constant c; prog_line n; 
+Select BOOLEAN such that Modifies (re, v)
+TRUE
+5000
+13 - Invalid - Testing args for Modifies (cannot be print)
+procedure p; stmt s; assign a; call cl; while w; if ifs; read re; print pr; variable v; constant c; prog_line n; 
+Select BOOLEAN such that Modifies (pr, v)
+FALSE
+5000
+14 - Valid - Testing args for Calls (must be proc)
+procedure p, q; stmt s; assign a; call cl; while w; if ifs; read re; print pr; variable v; constant c; prog_line n; 
+Select BOOLEAN such that Calls(p, q)
+TRUE
+5000
+15 - Invalid - Testing args for Modifies (2nd arg cannot be p)
+procedure p, q; stmt s; assign a; call cl; while w; if ifs; read re; print pr; variable v; constant c; prog_line n; 
+Select BOOLEAN such that Modifies (p, q)
+FALSE
+5000

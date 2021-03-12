@@ -1,0 +1,750 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>iter3</name><parsing_time_taken>398.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, procedure miss, stmtRef1 = int, stmtRef2 = synonym)">1</id><querystr><![CDATA[assign a; Select a such that Affects(10, a)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">2</id><querystr><![CDATA[assign a; Select a such that Affects(15, a)]]></querystr>
+<stuans>27,18</stuans>
+<correct>18,27</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">3</id><querystr><![CDATA[stmt s; Select s such that Affects(14, s)]]></querystr>
+<stuans>25</stuans>
+<correct>25</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">4</id><querystr><![CDATA[assign a; Select a such that Affects(25, a)]]></querystr>
+<stuans>25</stuans>
+<correct>25</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">5</id><querystr><![CDATA[assign a; Select a such that Affects(12, a)]]></querystr>
+<stuans>27</stuans>
+<correct>27</correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">6</id><querystr><![CDATA[stmt s; Select s such that Affects(20, s)]]></querystr>
+<stuans>27,19,18</stuans>
+<correct>18,19,27</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym, note: getRange modifies x)">7</id><querystr><![CDATA[assign a; Select a such that Affects(9, a)]]></querystr>
+<stuans>10</stuans>
+<correct>10</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, procedure sir, stmtRef1 = int, stmtRef2 = synonym)">8</id><querystr><![CDATA[stmt s; Select s such that Affects(30, s)]]></querystr>
+<stuans>32,39</stuans>
+<correct>32,39</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym, note: z is modified in call main)">9</id><querystr><![CDATA[stmt s; Select s such that Affects(34, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">10</id><querystr><![CDATA[stmt s; Select s such that Affects(37, s)]]></querystr>
+<stuans>39</stuans>
+<correct>39</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">11</id><querystr><![CDATA[stmt s; Select s such that Affects(38, s)]]></querystr>
+<stuans>39,38,41</stuans>
+<correct>38,39,41</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">12</id><querystr><![CDATA[stmt s; Select s such that Affects(39, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">13</id><querystr><![CDATA[stmt s; Select s such that Affects(41, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, procedure COLOUR, stmtRef1 = int, stmtRef2 = synonym)">14</id><querystr><![CDATA[stmt s; Select s such that Affects(43, s)]]></querystr>
+<stuans>45,51,57,85</stuans>
+<correct>45,51,57,85</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">15</id><querystr><![CDATA[stmt s; Select s such that Affects(45, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">16</id><querystr><![CDATA[stmt s; Select s such that Affects(47, s)]]></querystr>
+<stuans>76,84,81,83</stuans>
+<correct>76,81,83,84</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">17</id><querystr><![CDATA[stmt s; Select s such that Affects(51, s)]]></querystr>
+<stuans>92,56,86</stuans>
+<correct>56,86,92</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">18</id><querystr><![CDATA[stmt s; Select s such that Affects(56, s)]]></querystr>
+<stuans>63</stuans>
+<correct>63</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">19</id><querystr><![CDATA[stmt s; Select s such that Affects(57, s)]]></querystr>
+<stuans>66,68,89</stuans>
+<correct>66,68,89</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">20</id><querystr><![CDATA[assign a; Select a such that Affects(59, a)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">21</id><querystr><![CDATA[stmt s; Select s such that Affects(63, s)]]></querystr>
+<stuans>66</stuans>
+<correct>66</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">22</id><querystr><![CDATA[stmt s; Select s such that Affects(68, s)]]></querystr>
+<stuans>67,56</stuans>
+<correct>56,67</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">23</id><querystr><![CDATA[stmt s; Select s such that Affects(73, s)]]></querystr>
+<stuans>51,85,57</stuans>
+<correct>51,57,85</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">24</id><querystr><![CDATA[assign a; Select a such that Affects(74, a)]]></querystr>
+<stuans>81,67,56</stuans>
+<correct>81,56,67</correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">25</id><querystr><![CDATA[stmt s; Select s such that Affects(76, s)]]></querystr>
+<stuans>51,57,85</stuans>
+<correct>51,57,85</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">26</id><querystr><![CDATA[stmt s; Select s such that Affects(81, s)]]></querystr>
+<stuans>57</stuans>
+<correct>57</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">27</id><querystr><![CDATA[stmt s; Select s such that Affects(83, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">28</id><querystr><![CDATA[stmt s; Select s such that Affects(84, s)]]></querystr>
+<stuans>83,84</stuans>
+<correct>83,84</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">29</id><querystr><![CDATA[stmt s; Select s such that Affects(92, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, procedure fruits, stmtRef1 = int, stmtRef2 = synonym)">30</id><querystr><![CDATA[stmt s; Select s such that Affects(94, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">31</id><querystr><![CDATA[stmt s; Select s such that Affects(106, s)]]></querystr>
+<stuans>108,111,121</stuans>
+<correct>108,111,121</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">32</id><querystr><![CDATA[stmt s; Select s such that Affects(100, s)]]></querystr>
+<stuans>104,97</stuans>
+<correct>97,104</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">33</id><querystr><![CDATA[stmt s; Select s such that Affects(108, s)]]></querystr>
+<stuans>106,108</stuans>
+<correct>106,108</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">34</id><querystr><![CDATA[stmt s; Select s such that Affects(116, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">35</id><querystr><![CDATA[stmt s; Select s such that Affects(104, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">36</id><querystr><![CDATA[stmt s; Select s such that Affects(114, s)]]></querystr>
+<stuans>115</stuans>
+<correct>115</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">37</id><querystr><![CDATA[stmt s; Select s such that Affects(117, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">38</id><querystr><![CDATA[stmt s; Select s such that Affects(120, s)]]></querystr>
+<stuans>121</stuans>
+<correct>121</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">39</id><querystr><![CDATA[stmt s; Select s such that Affects(107, s)]]></querystr>
+<stuans>108,121</stuans>
+<correct>108,121</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">40</id><querystr><![CDATA[stmt s; Select s such that Affects(115, s)]]></querystr>
+<stuans>121</stuans>
+<correct>121</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">41</id><querystr><![CDATA[stmt s; Select s such that Affects(109, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, procedure animals, stmtRef1 = int, stmtRef2 = synonym)">42</id><querystr><![CDATA[stmt s; Select s such that Affects(130, s)]]></querystr>
+<stuans>134</stuans>
+<correct>134</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">43</id><querystr><![CDATA[stmt s; Select s such that Affects(135, s)]]></querystr>
+<stuans>134</stuans>
+<correct>134</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">44</id><querystr><![CDATA[stmt s; Select s such that Affects(152, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">45</id><querystr><![CDATA[stmt s; Select s such that Affects(144, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">46</id><querystr><![CDATA[stmt s; Select s such that Affects(149, s)]]></querystr>
+<stuans>149</stuans>
+<correct>149</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">47</id><querystr><![CDATA[stmt s; Select s such that Affects(126, s)]]></querystr>
+<stuans>128,143,149</stuans>
+<correct>128,143,149</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">48</id><querystr><![CDATA[stmt s; Select s such that Affects(128, s)]]></querystr>
+<stuans>144,133</stuans>
+<correct>133,144</correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">49</id><querystr><![CDATA[stmt s; Select s such that Affects(133, s)]]></querystr>
+<stuans>144,133</stuans>
+<correct>133,144</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">50</id><querystr><![CDATA[stmt s; Select s such that Affects(134, s)]]></querystr>
+<stuans>154,151</stuans>
+<correct>151,154</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, procedure food, stmtRef1 = int, stmtRef2 = synonym)">51</id><querystr><![CDATA[stmt s; Select s such that Affects(159, s)]]></querystr>
+<stuans>184</stuans>
+<correct>184</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">52</id><querystr><![CDATA[stmt s; Select s such that Affects(167, s)]]></querystr>
+<stuans>184</stuans>
+<correct>184</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">53</id><querystr><![CDATA[stmt s; Select s such that Affects(155, s)]]></querystr>
+<stuans>159</stuans>
+<correct>159</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">54</id><querystr><![CDATA[stmt s; Select s such that Affects(162, s)]]></querystr>
+<stuans>159</stuans>
+<correct>159</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">55</id><querystr><![CDATA[stmt s; Select s such that Affects(173, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">56</id><querystr><![CDATA[stmt s; Select s such that Affects(176, s)]]></querystr>
+<stuans>184</stuans>
+<correct>184</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">57</id><querystr><![CDATA[stmt s; Select s such that Affects(182, s)]]></querystr>
+<stuans>181</stuans>
+<correct>181</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">58</id><querystr><![CDATA[stmt s; Select s such that Affects(175, s)]]></querystr>
+<stuans>181</stuans>
+<correct>181</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">59</id><querystr><![CDATA[stmt s; Select s such that Affects(181, s)]]></querystr>
+<stuans>181</stuans>
+<correct>181</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">60</id><querystr><![CDATA[stmt s; Select s such that Affects(165, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">61</id><querystr><![CDATA[stmt s; Select s such that Affects(180, s)]]></querystr>
+<stuans>181,180</stuans>
+<correct>180,181</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">62</id><querystr><![CDATA[stmt s; Select s such that Affects(164, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, procedure SPA, stmtRef1 = int, stmtRef2 = synonym)">63</id><querystr><![CDATA[stmt s; Select s such that Affects(186, s)]]></querystr>
+<stuans>190,196</stuans>
+<correct>190,196</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">64</id><querystr><![CDATA[stmt s; Select BOOLEAN such that Affects(204, s)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">65</id><querystr><![CDATA[stmt s; Select s such that Affects(187, s)]]></querystr>
+<stuans>186,187</stuans>
+<correct>187,186</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">66</id><querystr><![CDATA[stmt s; Select s such that Affects(205, s)]]></querystr>
+<stuans>186</stuans>
+<correct>186</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">67</id><querystr><![CDATA[stmt s; Select s such that Affects(202, s)]]></querystr>
+<stuans>202</stuans>
+<correct>202</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">68</id><querystr><![CDATA[stmt s; Select BOOLEAN such that Affects(189, s)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = synonym)">69</id><querystr><![CDATA[stmt s; Select BOOLEAN such that Affects(199, s)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = int)">70</id><querystr><![CDATA[ Select BOOLEAN such that Affects(1, 1)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = int)">71</id><querystr><![CDATA[ Select BOOLEAN such that Affects(146, 152)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = int)">72</id><querystr><![CDATA[ Select BOOLEAN such that Affects(149, 149)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>68.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = int)">73</id><querystr><![CDATA[ Select BOOLEAN such that Affects(176, 184)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = int)">74</id><querystr><![CDATA[ Select BOOLEAN such that Affects(155, 155)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = int, stmtRef2 = int)">75</id><querystr><![CDATA[ Select BOOLEAN such that Affects(190, 202)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">76</id><querystr><![CDATA[assign a; Select a such that Affects(a, 10)]]></querystr>
+<stuans>9</stuans>
+<correct>9</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">77</id><querystr><![CDATA[stmt s; Select s such that Affects(s, 18)]]></querystr>
+<stuans>15,13,18,20</stuans>
+<correct>18,15,13,20</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">78</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 27)]]></querystr>
+<stuans>11,20,21,18,15,24,12,23,13</stuans>
+<correct>12,23,24,13,20,11,21,15,18</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">79</id><querystr><![CDATA[assign a; Select a such that Affects(a, 27)]]></querystr>
+<stuans>15,24,23,12,18,21,11,20,13</stuans>
+<correct>12,23,24,13,20,11,21,15,18</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">80</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 25)]]></querystr>
+<stuans>25,14</stuans>
+<correct>25,14</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">81</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 19)]]></querystr>
+<stuans>13,11,20,21</stuans>
+<correct>20,13,21,11</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">82</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 41)]]></querystr>
+<stuans>32,38</stuans>
+<correct>32,38</correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">83</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 39)]]></querystr>
+<stuans>38,30,37,32</stuans>
+<correct>37,30,38,32</correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">84</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 38)]]></querystr>
+<stuans>32,38</stuans>
+<correct>38,32</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, procedure COLOUR, stmtRef1 = synonym, stmtRef2 = int)">85</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 59)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">86</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 57)]]></querystr>
+<stuans>43,76,73,67,81</stuans>
+<correct>73,76,67,81,43</correct>
+<time_taken>69.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">87</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 85)]]></querystr>
+<stuans>43,76,73</stuans>
+<correct>43,73,76</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">88</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 81)]]></querystr>
+<stuans>74,47</stuans>
+<correct>74,47</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">89</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 117)]]></querystr>
+<stuans>101</stuans>
+<correct>101</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">90</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 121)]]></querystr>
+<stuans>106,115,120,107</stuans>
+<correct>120,107,115,106</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">91</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 115)]]></querystr>
+<stuans>114,111</stuans>
+<correct>114,111</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">92</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 104)]]></querystr>
+<stuans>100</stuans>
+<correct>100</correct>
+<time_taken>217.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">93</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 108)]]></querystr>
+<stuans>106,108,107</stuans>
+<correct>106,107,108</correct>
+<time_taken>74.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">94</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 134)]]></querystr>
+<stuans>124,130,135</stuans>
+<correct>124,130,135</correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">95</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 151)]]></querystr>
+<stuans>134</stuans>
+<correct>134</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">96</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 181)]]></querystr>
+<stuans>175,180,181,182</stuans>
+<correct>180,181,175,182</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">97</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 92)]]></querystr>
+<stuans>51,66</stuans>
+<correct>51,66</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">98</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 196)]]></querystr>
+<stuans>186</stuans>
+<correct>186</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">99</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 186)]]></querystr>
+<stuans>205,187</stuans>
+<correct>205,187</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = int)">100</id><querystr><![CDATA[prog_line n; Select n such that Affects(n, 188)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = synonym)">101</id><querystr><![CDATA[assign a1; assign a2; Select <a1, a2> such that Affects(a1, a2)]]></querystr>
+<stuans>21 20,11 27,159 184,18 18,20 19,57 66,205 186,128 133,84 84,76 85,18 27,181 181,32 41,134 151,186 196,76 51,106 121,47 84,73 85,30 39,84 83,126 143,43 45,106 111,73 51,66 92,13 27,186 190,76 57,126 149,155 159,30 32,51 86,99 100,43 85,199 199,107 108,51 56,9 10,126 128,43 51,138 124,19 21,57 89,167 184,51 92,13 18,20 27,190 202,73 57,14 25,74 67,134 154,74 56,128 144,20 18,101 117,120 121,25 25,37 39,12 27,24 27,114 115,111 114,43 57,106 108,74 81,111 115,13 19,21 19,11 20,21 27,63 66,15 27,15 18,108 108,108 106,180 181,66 74,130 134,180 180,11 19,56 63,32 38,32 39,107 121,23 27,38 38,38 39,187 187,38 41,115 121,176 184,68 67,98 99,149 149,175 181,124 134,67 57,182 181,97 98,162 159,86 56,86 67,47 83,47 76,47 81,100 104,133 133,100 97,81 57,68 56,133 144,187 186,135 134,57 68,202 202</stuans>
+<correct>100 104,100 97,101 117,106 108,106 111,106 121,107 108,107 121,108 106,108 108,11 19,11 20,11 27,111 114,111 115,114 115,115 121,12 27,120 121,124 134,126 128,126 143,126 149,128 133,128 144,13 18,13 19,13 27,130 134,133 133,133 144,134 151,134 154,135 134,138 124,14 25,149 149,15 18,15 27,155 159,159 184,162 159,167 184,175 181,176 184,18 18,18 27,180 180,180 181,181 181,182 181,186 190,186 196,187 186,187 187,19 21,190 202,199 199,20 18,20 19,20 27,202 202,205 186,21 19,21 20,21 27,23 27,24 27,25 25,30 32,30 39,32 38,32 39,32 41,37 39,38 38,38 39,38 41,43 45,43 51,43 57,43 85,47 76,47 81,47 83,47 84,51 56,51 86,51 92,56 63,57 66,57 68,57 89,63 66,66 74,66 92,67 57,68 56,68 67,73 51,73 57,73 85,74 56,74 67,74 81,76 51,76 57,76 85,81 57,84 83,84 84,86 56,86 67,9 10,97 98,98 99,99 100</correct>
+<time_taken>378.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = synonym)">102</id><querystr><![CDATA[assign a;  Select a such that Affects(a, a)]]></querystr>
+<stuans>180,108,18,84,187,38,25,202,133,149,181,199</stuans>
+<correct>25,38,84,108,149,133,181,180,187,202,18,199</correct>
+<time_taken>187.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = synonym)">103</id><querystr><![CDATA[stmt s;  Select s such that Affects(s, s)]]></querystr>
+<stuans>18,108,84,187,199,25,38,202,180,149,133,181</stuans>
+<correct>25,38,84,108,149,133,181,180,187,202,18,199</correct>
+<time_taken>170.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query (1 Affects clause, stmtRef1 = synonym, stmtRef2 = synonym)">104</id><querystr><![CDATA[prog_line n;  Select n such that Affects(n, n)]]></querystr>
+<stuans>133,38,202,18,108,187,84,149,25,181,199,180</stuans>
+<correct>25,38,84,108,149,133,181,180,187,202,18,199</correct>
+<time_taken>172.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" Next="1" Parentstar="1" UnnamedVar="3" Pattern="2" SuchThat="2" CondNum="11" RelNum="3" comment="valid query (Multiple clauses, 1 Affects clause)">105</id><querystr><![CDATA[assign a; while w; prog_line n; Select <a, n> such that Affects(a, a) and Parent*(w, a) pattern w("count", _) pattern w("x", _) such that Next(n, a)]]></querystr>
+<stuans>18 17,25 23,25 24</stuans>
+<correct>25 23,25 24,18 17</correct>
+<time_taken>374.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Affects="1" Uses="1" SuchThat="1" CondNum="4" RelNum="2" comment="valid query (Multiple clauses, 1 Affects clause)">106</id><querystr><![CDATA[assign a, a1; Select a such that Affects(a, a1) and Uses(a1, "sum")]]></querystr>
+<stuans>21,18,9,24,20,11,23,13,15,12</stuans>
+<correct>9,11,12,13,15,18,20,21,23,24</correct>
+<time_taken>175.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

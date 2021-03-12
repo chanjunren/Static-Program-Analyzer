@@ -1,0 +1,3 @@
+procedure hello {
+	x = Yy7 ^ 2;
+}

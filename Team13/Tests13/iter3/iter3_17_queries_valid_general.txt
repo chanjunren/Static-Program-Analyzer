@@ -1,0 +1,15 @@
+1 - Select variable modified in if container and Many Tabs
+variable 	v; 	if 	ifs;
+Select	 v 		such that 	Modifies 	(ifs, v)
+none
+5000
+2 - Select variable modified in while container and alot whitespace
+variable v;     while                   w;
+Select       v          such that       Modifies       (w, v)
+b, x, a, c
+5000
+3 - Select variable modified in while container and even more whitespace
+variable                                    v       ;         while                   w       ;
+Select                    v                   such that                 Modifies             (              w          ,       v       )
+b, x, a, c
+5000

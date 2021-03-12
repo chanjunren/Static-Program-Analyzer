@@ -1,0 +1,235 @@
+82 - valid query
+stmt s;
+Select s such that Follows(_, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
+5000
+83 - valid query
+stmt s; assign a;
+Select a such that Follows(_, s)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 16, 17, 19, 20, 22, 23, 26, 27, 30, 31, 33, 34
+5000
+84 - valid query
+stmt s; if ifs;
+Select s such that Follows(_,ifs)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
+5000
+85 - valid query
+stmt s;
+Select s such that Follows(_, 6)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
+5000
+86 - valid query but has empty results 
+stmt s;
+Select s such that Follows(_, 1)
+none
+5000
+87 - valid query 
+stmt s; assign a;
+Select s such that Follows(a, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
+5000
+88 - valid query
+stmt s; assign a; variable v;
+Select v such that Follows(s, a)
+a, b, c, D, f, i, m, p, q, x, y, flag, count, c5, cDe2
+5000
+89 - valid query
+assign a; if ifs; stmt s;
+Select s such that Follows(a,ifs)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
+5000
+90 - valid query
+print p; read r; stmt s;
+Select s such that Follows(r, p)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
+5000
+91 - valid query but has empty results 
+stmt s; assign a; variable v;
+Select v such that Follows(s, s)
+none
+5000
+92 - valid query but has empty results
+print p; if ifs; stmt s;
+Select s such that Follows(p,ifs)
+none
+5000
+93 - valid query but has empty results 
+print p; stmt s;
+Select s such that Follows(p, 28)
+none
+5000
+94 - valid query
+stmt s; if ifs;
+Select s such that Follows(ifs, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
+5000
+95 - valid query
+stmt s; if ifs; assign a;
+Select s such that Follows(ifs, a)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
+5000
+96 - valid query but has empty reuslts 
+stmt s; while w; if ifs;
+Select s such that Follows(w,ifs)
+none
+5000
+97 - valid query
+stmt s; if ifs;
+Select s such that Follows(ifs, 30)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
+5000
+98 - valid query but has empty results 
+stmt s; if ifs; print p;
+Select s such that Follows(ifs, p)
+none
+5000
+99 - valid query but has empty results 
+stmt s; while w1, w2;
+Select s such that Follows(w1, w2)
+none
+5000
+100 - valid query but has empty results 
+stmt s; if ifs;
+Select s such that Follows(ifs, 22)
+none
+5000
+101 - valid query
+stmt s;
+Select s such that Follows(19, _)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
+5000
+102 - valid query
+stmt s; print p;
+Select s such that Follows(24, p)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
+5000
+103 - valid query
+stmt s; if ifs;
+Select s such that Follows(20, ifs)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
+5000
+104 - valid query
+stmt s;
+Select s such that Follows(8, 9)
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
+5000
+105 - valid query but has empty results
+stmt s; if ifs;
+Select s such that Follows(34, _)
+none
+5000
+106 - valid query but has empty results 
+stmt s; print p;
+Select s such that Follows(22, p)
+none
+5000
+107 - valid query but has empty results 
+stmt s; if ifs;
+Select s such that Follows(18, ifs)
+none
+5000
+108 - valid query but has empty results 
+stmt s;
+Select s such that Follows(25, 26)
+none
+5000
+109 - valid query (dependent synonym, stmtRef1 = _, stmtRef2 = s/a/r/p)
+assign a;
+Select a such that Follows(_, a)
+2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 16, 17, 19, 20, 23, 27, 30, 31, 34
+5000
+110 - valid query
+if ifs;
+Select ifs such that Follows(_,ifs)
+21
+5000
+111 - valid query 
+print p;
+Select p such that Follows(p, _)
+14, 18
+5000
+112 - valid query 
+assign a, a1;
+Select a such that Follows(a1, a)
+2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 16, 17, 20, 23, 27, 31, 34
+5000
+113 - valid query
+assign a; while w;
+Select a such that Follows(a,w)
+31
+5000
+114 - valid query 
+read r;
+Select r such that Follows(r, 25)
+24
+5000
+115 - valid query but has empty results
+print p; read r;
+Select p such that Follows(p, r)
+none
+5000
+116 - valid query but has empty results 
+print p; while w;
+Select p such that Follows(p,w)
+none
+5000
+117 - valid query but has empty results
+read r;
+Select r such that Follows(r, 23)
+none
+5000
+118 - valid query
+if ifs;
+Select ifs such that Follows(ifs, _)
+21
+5000
+119 - valid query but has empty results
+if ifs; read r;
+Select ifs such that Follows(ifs, r)
+none
+5000
+120 - valid query but has empty results
+while w; if ifs;
+Select w such that Follows(w,ifs)
+none
+5000
+121 - valid query
+if ifs;
+Select ifs such that Follows(ifs, 30)
+21
+5000
+122 - valid query but has empty results
+if ifs; print p;
+Select ifs such that Follows(ifs, p)
+none
+5000
+123 - valid query but has empty results
+while w; if ifs;
+Select w such that Follows(ifs, w)
+none
+5000
+124 - valid query but has empty results
+if ifs;
+Select ifs such that Follows(ifs, 29)
+none
+5000
+125 - valid query 
+assign a;
+Select a such that Follows(21, a)
+30
+5000
+126 - valid query
+if ifs;
+Select ifs such that Follows(20, ifs)
+21
+5000
+127 - valid query but has empty results
+assign a;
+Select a such that Follows(25, a)
+none
+5000
+128 - valid query but has empty results 
+if ifs;
+Select ifs such that Follows(21, ifs)
+none
+5000

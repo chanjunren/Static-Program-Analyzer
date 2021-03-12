@@ -1,0 +1,80 @@
+procedure Gandalf {
+	read Food; 																										//1
+	ring = shine * 2; 																						//2
+	f = ring + 3; 																								//3
+	read help; 																										//4
+	read Frodo; 																									//5
+	if ((lost != ((shine * 6 % ring) + help) / (9 + 32))
+	&& (0 == 0)
+	|| (Frodo != help)) then { 																			//6
+		print Aragon; 																							//7
+		d = (shine + 12) * help - (55 % ((((6))))); 								//8
+		print ginger;																								//9
+	}  else {
+		d = 2;																											//10
+		read ginger;																								//11
+		ginger = (a+b)*(a+b)*a+b*a+b/a+b%a+b;												//12
+	}
+	if (check == breakfast) {																			//13
+		bread = a+b*a+b																							//14
+		Food = (a+b)*(a+b)																					//15
+		bread = b/a+b																								//16
+		Food = b%a+b																								//17
+	} else {
+		tomato = (a+b)*a+b*a+b																			//18
+		carrot = b*a+b/a																						//19
+	}
+	while (f > 10) {																							//20
+			read g;																										//21
+			f = ring + 4 + g * a * 2 * 1 + shine + 45;								//22
+			read Frodo;																								//23
+			call Food;																								//24
+	}
+	if (Frodo == shine) then {																		//25
+		print help;																									//26
+		read Gandalf;																								//27
+	} else {
+		print Frodo;																								//28
+		carrot = carrot + tomato;																		//29
+		breakfast = bread*2;																				//30
+	}
+	print d;																											//31
+	while (breakfast == eat) {																		//32
+		read breakfast;																							//33
+		print Food;																									//34
+		call Food;																									//35
+	}
+	while (lunch != skip) {																				//36
+		hungry = breakfast + lunch + dinner;												//37
+		print hungry;																								//38
+		read hungry;																								//39
+		dinner = c+d-c*d/c%d;																				//40
+		hungry = d-c;																								//41
+		hungry = d/c;																								//42
+	}
+	hungry = breakfast + (lunch + dinner) * (breakfast) + dinner;	//43
+	skip = breakfast + (lunch + dinner);													//44
+	call Food;																										//45
+}
+
+procedure Food {
+	print hungry;																									//46
+	read hungry;																									//47
+	hungry = hungry;																							//48
+}
+
+/* for reference */
+all stmt # = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48
+
+all constant # = 2,3,6,9,32,12,55,4,1,0,45
+all assign # = 2,3,8,10,12,14,15,16,17,18,19,22,29,30,37,40,41,42,43,44,48
+all if # = 6,13,25
+all while # = 20,32,36
+all call # = 24,35,45
+all read # = 1,4,5,11,21,23,27,33,39,47
+all print # = 7,9,26,28,31,38,46
+read (variables) = Food, help, Frodo, ginger, g, Gandalf, breakfast, hungry
+print (variables) = hungry, Food, d, Frodo, help, ginger, Aragon
+call (procedures) = Food
+procedures = Food, Gandalf
+variables = hungry,Food,breakfast,lunch,dinner,d,c,skip,carrot,tomato,Gandalf,eat,bread,help,Frodo,shine,f,ring,g,Aragon,ginger,check,a,b,lost

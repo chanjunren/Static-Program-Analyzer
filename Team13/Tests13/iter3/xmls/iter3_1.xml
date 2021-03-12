@@ -1,0 +1,176 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>iter3</name><parsing_time_taken>182.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnBoolean="1" CondNum="1" RelNum="0" comment="valid query BOOLEAN">1</id><querystr><![CDATA[ Select BOOLEAN]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query BOOLEAN 1 clause">2</id><querystr><![CDATA[assign a; Select BOOLEAN such that Modifies(a, "b")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query BOOLEAN 1 clause">3</id><querystr><![CDATA[call c; Select BOOLEAN such that Uses(c, "EEEEE")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="valid query BOOLEAN 1 clause">4</id><querystr><![CDATA[ Select BOOLEAN with 1=1]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="valid query BOOLEAN 1 clause">5</id><querystr><![CDATA[assign a; Select BOOLEAN with a.stmt#=12]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query BOOLEAN 1 clause">6</id><querystr><![CDATA[assign a; Select BOOLEAN such that Next(6, 7)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query BOOLEAN 1 clause">7</id><querystr><![CDATA[ Select BOOLEAN such that Calls(_,_)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" Uses="1" SuchThat="1" CondNum="4" RelNum="2" comment="valid query BOOLEAN 2 clauses">8</id><querystr><![CDATA[stmt s; Select BOOLEAN such that Modifies(s, "a") and Uses(11, "ifVar")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="2" Pattern="1" SuchThat="1" CondNum="6" RelNum="1" comment="valid query BOOLEAN 2 clauses">9</id><querystr><![CDATA[if ifs; Select BOOLEAN such that Calls(_,_) pattern ifs("bA",_,_)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" Nextstar="1" SuchThat="1" CondNum="4" RelNum="2" comment="valid query BOOLEAN 2 clauses">10</id><querystr><![CDATA[ Select BOOLEAN such that Next*(34, 41) and Modifies(34, "EEEEE")]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Parentstar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="2" comment="valid query BOOLEAN 2 clauses">11</id><querystr><![CDATA[ Select BOOLEAN such that Parent*(34, 41) and Uses("procA", "abc")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Followsstar="1" Modifies="1" Uses="1" SuchThat="1" CondNum="5" RelNum="3" comment="valid query BOOLEAN 3 clauses">12</id><querystr><![CDATA[assign a; procedure p; Select BOOLEAN such that Follows*(51, 60) and Modifies(a, "a") and Uses(p, "dBBB")]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Followsstar="1" Uses="1" SuchThat="1" With="1" CondNum="5" RelNum="2" comment="valid query BOOLEAN 3 clauses">13</id><querystr><![CDATA[assign a; call c; Select BOOLEAN such that Follows*(34, 45) and Uses(c, "x") with c.procName="procC"]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" Uses="1" Pattern="1" SuchThat="1" CondNum="6" RelNum="2" comment="valid query BOOLEAN 3 clauses">14</id><querystr><![CDATA[assign a; variable v; if ifs; Select BOOLEAN such that Modifies(a, v) and Uses(a, v) pattern ifs(v,_,_)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>100.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" Modifies="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="2" comment="valid query BOOLEAN 3 clauses">15</id><querystr><![CDATA[assign a; Select BOOLEAN such that Calls*("procB", "procC") and Modifies(a, "a") pattern a("dAAA", "dBBB")]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" Nextstar="1" Uses="1" SuchThat="1" CondNum="5" RelNum="3" comment="valid query BOOLEAN 3 clauses">16</id><querystr><![CDATA[procedure p; Select BOOLEAN such that Next*(34, 34) and Uses(p, "dBBB") and Calls(p, "procC")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Followsstar="1" Modifies="1" Parentstar="1" Uses="1" SuchThat="1" CondNum="6" RelNum="4" comment="valid query BOOLEAN 4 clauses">17</id><querystr><![CDATA[assign a; stmt s, s1; variable v; Select BOOLEAN such that Follows*(s, 38) and Uses(s, v) and Modifies(s, v) and Parent*(s1, a)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Followsstar="1" Modifies="1" UnnamedVar="1" Uses="1" Pattern="1" SuchThat="1" CondNum="7" RelNum="3" comment="valid query BOOLEAN 4 clauses">18</id><querystr><![CDATA[assign a; variable v; stmt s1; if ifs1, ifs2; Select BOOLEAN such that Follows*(ifs1, ifs2) and Modifies(ifs2, v) and Uses(s1, v) pattern a(v, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>73.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" Parentstar="1" UnnamedVar="1" Uses="1" Pattern="1" SuchThat="1" CondNum="7" RelNum="3" comment="valid query BOOLEAN 4 clauses">19</id><querystr><![CDATA[procedure p1, p2; variable v; while w1, w2; Select BOOLEAN such that Parent*(w1, w2) and Calls*(p1, p2) and Uses(p1, v) pattern w1(v, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>103.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" Nextstar="1" UnnamedVar="1" Uses="1" Pattern="1" SuchThat="1" CondNum="7" RelNum="3" comment="valid query BOOLEAN 4 clauses">20</id><querystr><![CDATA[assign a; stmt s1; procedure p; variable v; if ifs; Select BOOLEAN such that Next*(7, s1) and Modifies(s1, v) and Uses(s1, v) pattern ifs(v,_,_)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>69.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="2" Parentstar="1" UnnamedVar="1" Uses="1" Pattern="1" SuchThat="3" CondNum="10" RelNum="4" comment="valid query BOOLEAN 5 clauses">21</id><querystr><![CDATA[assign a; variable v; stmt s1; procedure p; if ifs; Select BOOLEAN such that Uses(s1, v) and Modifies(ifs, v) such that Modifies(p, v) pattern a(v, _) such that Parent*(34, s1)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Callsstar="1" Modifies="2" UnnamedVar="2" Uses="2" Pattern="1" SuchThat="2" CondNum="11" RelNum="5" comment="valid query BOOLEAN 6 clauses">22</id><querystr><![CDATA[assign a; variable v; stmt s1; procedure p1, p2; if ifs; Select BOOLEAN pattern a(v, _) such that Calls*(p1, p2) such that Modifies(ifs, v) and Uses(p1, _) and Uses(s1, v) and Modifies(p2, v)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>89.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" Parentstar="1" UnnamedVar="4" Uses="1" Pattern="3" SuchThat="3" CondNum="14" RelNum="3" comment="valid query BOOLEAN 6 clauses">23</id><querystr><![CDATA[assign a; variable v; procedure p; if ifs; while w; Select BOOLEAN pattern a(v, _) such that Parent*(ifs, w) pattern ifs("bA", _, _) such that Uses(p, v) such that Modifies(ifs, v) pattern w(v, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>91.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" Nextstar="1" Parentstar="1" UnnamedVar="4" Uses="1" Pattern="3" SuchThat="4" CondNum="16" RelNum="4" comment="valid query BOOLEAN 7 clauses">24</id><querystr><![CDATA[assign a; variable v; procedure p; if ifs; while w1, w2; Select BOOLEAN such that Next*(25, w2) such that Modifies(ifs, v) such that Uses(p, v) pattern a(v, _) pattern w1(v, _) such that Parent*(w1, w2) pattern ifs("bA", _, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>83.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

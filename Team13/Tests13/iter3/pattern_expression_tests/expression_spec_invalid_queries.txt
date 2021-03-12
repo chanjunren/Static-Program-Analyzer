@@ -1,0 +1,5 @@
+1 - invalid expression, two integers consecutively
+assign a;
+Select a pattern a ( _ , " 10  20  " )
+1
+5000

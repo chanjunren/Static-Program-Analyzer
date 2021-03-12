@@ -1,0 +1,64 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>iter1</name><parsing_time_taken>180.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Find variable with Modifies procedure">22</id><querystr><![CDATA[procedure p; variable v; Select v such that Modifies("procD", v)]]></querystr>
+<stuans>dAAA,dA</stuans>
+<correct>dA,dAAA</correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Find procedure with Modifies procedure">23</id><querystr><![CDATA[procedure p; variable v; Select p such that Modifies(p, v)]]></querystr>
+<stuans>procA,withTest,procB,procD,procC,ifA,ifInIf</stuans>
+<correct>ifA,ifInIf,procA,procB,procC,procD,withTest</correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Find variable with Modifies procedure">24</id><querystr><![CDATA[procedure p; variable v; Select v such that Modifies(p, v)]]></querystr>
+<stuans>n,bA,a,y,b,z,uniA,bD,k,dAAA,ifVar,procC,uniC,file,c,x,dA,ifA,ifB</stuans>
+<correct>a,b,bA,bD,c,dA,dAAA,file,ifA,ifB,ifVar,k,n,procC,uniA,uniC,x,y,z</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Find variable with Modifies 'procedure'">25</id><querystr><![CDATA[variable v; Select v such that Modifies("procB", v)]]></querystr>
+<stuans>dAAA,bA,y,dA,uniA,x,bD,k,z,file</stuans>
+<correct>bA,bD,dA,dAAA,file,k,uniA,x,y,z</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Find call with Modifies call variable">26</id><querystr><![CDATA[call c; variable v; Select c such that Modifies(c, v)]]></querystr>
+<stuans>45,3,29,37</stuans>
+<correct>29,3,37,45</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Find call with Modifies call 'variable'">27</id><querystr><![CDATA[call c; Select c such that Modifies(c, "dAAA")]]></querystr>
+<stuans>3,37,29</stuans>
+<correct>29,3,37</correct>
+<time_taken>67.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Find no results boolean">28</id><querystr><![CDATA[assign a; Select BOOLEAN such that Modifies(a, "nonexistent")]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Find results boolean">29</id><querystr><![CDATA[assign a; Select BOOLEAN such that Modifies(a, "b")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>67.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

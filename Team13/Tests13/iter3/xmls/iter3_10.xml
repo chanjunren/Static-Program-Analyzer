@@ -1,0 +1,113 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>iter3</name><parsing_time_taken>27.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Semantic: declarations - same synonyms within a declaration">1</id><querystr><![CDATA[procedure p, p; Select p]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>34.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Semantic: declarations - same synonyms across declarations">2</id><querystr><![CDATA[procedure p; stmt s; if p; Select p]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>33.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" SuchThat="1" CondNum="3" RelNum="1" comment="Syntactic: integer - not in positive range (> 0)">3</id><querystr><![CDATA[stmt s; Select s such that Follows (s, -1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Follows="1" SuchThat="1" CondNum="3" RelNum="1" comment="Syntactic: integer - first digit is 0">4</id><querystr><![CDATA[stmt s; Select s such that Follows (01, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>33.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Syntactic: IDENT - first letter is digit">5</id><querystr><![CDATA[procedure 4p; Select p]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>35.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Syntactic: IDENT - contains symbols">6</id><querystr><![CDATA[procedure s{z; Select s{z]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>33.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" CondNum="1" RelNum="0" comment="Syntactic : missing comma">7</id><querystr><![CDATA[procedure p q; Select BOOLEAN]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" CondNum="1" RelNum="0" comment="Syntactic : caps design ent">8</id><querystr><![CDATA[Procedure p; Select BOOLEAN]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>37.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" CondNum="1" RelNum="0" comment="Syntactic : SelecT">9</id><querystr><![CDATA[stmt s; SelecT BOOLEAN]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>35.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Follows="1" SuchThat="1" CondNum="3" RelNum="1" comment="Syntactic : such that wrong case">10</id><querystr><![CDATA[stmt s1, s2; Select BOOLEAN such thaT Follows (s1, 10)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" SuchThat="1" CondNum="2" RelNum="0" comment="Syntactic : Follows wrong case">11</id><querystr><![CDATA[stmt s1, s2; Select BOOLEAN such that follows (s2, 10)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" CondNum="1" RelNum="0" comment="Syntactic : with wrong case for with">12</id><querystr><![CDATA[stmt s1; Select BOOLEAN wiTh s1.stmt# = 10]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>37.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Follows="1" SuchThat="2" CondNum="4" RelNum="1" comment="Syntactic : double such that">13</id><querystr><![CDATA[stmt s1; Select BOOLEAN such that such that Follows (s1, 10)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" SuchThat="1" CondNum="2" RelNum="0" comment="Syntactic : ProcName wrong case">14</id><querystr><![CDATA[procedure p; Select BOOLEAN such that p.ProcName="dmp"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Follows="1" SuchThat="1" CondNum="3" RelNum="1" comment="Syntactic : Extra spacing between such that">15</id><querystr><![CDATA[stmt s; Select BOOLEAN such  that Follows (s, 10)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>37.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

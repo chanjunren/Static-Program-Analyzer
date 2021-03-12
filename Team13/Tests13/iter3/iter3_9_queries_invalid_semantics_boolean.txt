@@ -1,0 +1,120 @@
+1 - invalid semantics but valid syntax - entref instead of stmtref in first arg
+stmt s; procedure p;
+Select BOOLEAN such that Follows ( p , 10 )
+FALSE
+5000
+2 - invalid semantics but valid syntax - stmtref instead of entref in assign pattern
+assign a; stmt s;
+Select BOOLEAN pattern a ( s , "x" )
+FALSE
+5000
+3 - invalid semantics but valid syntax - undeclared synonym in first argument
+assign a;
+Select BOOLEAN such that Modifies ( sdfsdf , "x")
+FALSE
+5000
+4 - invalid semantics but valid syntax - with clause synonym not type prog_line
+variable v;
+Select BOOLEAN with v = "x"
+FALSE
+5000
+5 - invalid semantics but valid syntax - undeclared synonym inside with clause
+stmt s;
+Select BOOLEAN with s1.stmt# = 20
+FALSE
+5000
+6 - invalid semantics but valid syntax - mismatching attrRef types
+stmt s; procedure p;
+Select BOOLEAN with s.stmt# = p.stmt#
+FALSE
+5000
+7 - invalid semantics but valid syntax - mismatching attrRef types
+constant c;
+Select BOOLEAN with c.varName = "x"
+FALSE
+5000
+8 - invalid semantics but valid syntax - undeclared synonym in second argument
+stmt s; if ifs;
+Select BOOLEAN such that Follows ( ifs, blah )
+FALSE
+5000
+9 - invalid semantics but valid syntax - stmtref instead of entref in while pattern
+call cl; while w;
+Select BOOLEAN pattern w (cl, _)
+FALSE
+5000
+10 - invalid syntax, assign pattern type with 3 args
+assign a; if ifs; variable v;
+Select BOOLEAN pattern a (v, _, _)
+none
+5000
+11 - syntax error : string found in 2nd arg of parent clause
+stmt s; procedure p;
+Select BOOLEAN such that Parent ( 12 , "x" )
+none
+5000
+12 - invalid semantics but valid syntax - redeclared synonym in same declaration
+stmt s, s;
+Select BOOLEAN
+FALSE
+5000
+13 - invalid semantics but valid syntax - redeclared synonym in different declaration
+stmt s; procedure p; assign s;
+Select BOOLEAN
+FALSE
+5000
+14 - invalid semantics but valid syntax - redeclared synonym in different declarations and multiple declarations
+stmt s, s1, s2, s3; procedure p; call c, c2, c3, c4, c5, s, c6;
+Select BOOLEAN
+FALSE
+5000
+15 - invalid semantics but valid syntax - underscore as first arg of Uses
+stmt s;
+Select BOOLEAN such that Uses ( _ , "x")
+FALSE
+5000
+16 - invalid semantics but valid syntax - underscore as first arg of Modifies
+stmt s;
+Select BOOLEAN such that Modifies ( _ , "x")
+FALSE
+5000
+17 - valid - ModifiesS
+stmt s, s1;
+Select BOOLEAN such that Modifies ( s , "x")
+TRUE
+5000
+18 - invalid semantics but valid syntax - stmtref instead of entref in second arg of uses
+stmt s, s1;
+Select BOOLEAN such that Uses ( "y" , s1)
+FALSE
+5000
+19 - invalid semantics but valid syntax - stmtref instead of entref in second arg of calls
+stmt s;
+Select BOOLEAN such that Calls ("x" , s) 
+FALSE
+5000
+20 - invalid semantics but valid syntax - entref instead of stmt ref in first arg of Affects
+procedure p;
+Select BOOLEAN such that Affects (p, 10)
+FALSE
+5000
+21 - invalid semantics but found invalid syntax afterwards - BOOLEAN should output none as syntax error
+procedure p, p;
+Select BOOLEAN such that Affects([], 100)
+none
+5000
+22 - invalid semantics but valid syntax - variable inside Calls
+variable v; procedure cl;
+Select BOOLEAN such that Calls (v, "procA")
+FALSE
+5000
+23 - invalid semantics but valid syntax - variable inside Calls
+variable v; procedure cl;
+Select BOOLEAN such that Calls (_, "procA")
+FALSE
+5000
+24 - invalid semantics but valid syntax - underscore as first arg of Uses
+stmt s;
+Select BOOLEAN such that Uses ( _ , "x")
+FALSE
+5000

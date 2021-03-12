@@ -1,0 +1,5 @@
+procedure main {
+    z = x+y;
+    lmao = z/y/asdjlks* xx + qqqq - m12345 * (z + 100000000/2/2/2/2/2/2/2/2/2)%x%x%x%x%z%z%z/QWERQWERQWER;
+    haha = z+1+y;
+}

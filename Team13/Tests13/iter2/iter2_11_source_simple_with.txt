@@ -1,0 +1,64 @@
+procedure Gandalf {
+	read Food;
+	ring = shine * 2;
+	f = ring + 3;
+	read help;
+	read Frodo;
+	if ((lost != ((shine * 6 % ring) + help) / (9 + 32))
+	&& (0 == 0)
+	|| (Frodo != help)) then {
+		print Aragon;
+		d = (shine + 12) * help - (55 % ((((6)))));
+		print ginger;
+	}  else {
+		d = 2;
+		read ginger;
+		ginger = (a+b)*(a+b)*a+b*a+b/a+b%a+b;
+	}
+	if (check == breakfast) then {
+		bread = a+b*a+b;
+		Food = (a+b)*(a+b);
+		bread = b/a+b;
+		Food = b%a+b;
+	} else {
+		tomato = (a+b)*a+b*a+b;
+		carrot = b*a+b/a;
+	}
+	while (f > 10) {
+			read g;
+			f = ring + 4 + g * a * 2 * 1 + shine + 45;
+			read Frodo;
+			call Food;
+	}
+	if (Frodo == shine) then {
+		print help;
+		read Gandalf;
+	} else {
+		print Frodo;
+		carrot = carrot + tomato;
+		breakfast = bread*2;
+	}
+	print d;
+	while (breakfast == eat) {
+		read breakfast;
+		print Food;
+		call Food;
+	}
+	while (lunch != skip) {
+		hungry = breakfast + lunch + dinner;
+		print hungry;
+		read hungry;
+		dinner = c+d-c*d/c%d;
+		hungry = d-c;
+		hungry = d/c;
+	}
+	hungry = breakfast + (lunch + dinner) * (breakfast) + dinner;
+	skip = breakfast + (lunch + dinner);
+	call Food;
+}
+
+procedure Food {
+	print hungry;
+	read hungry;
+	hungry = hungry;
+}

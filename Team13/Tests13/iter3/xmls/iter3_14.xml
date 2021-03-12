@@ -1,0 +1,113 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>iter3</name><parsing_time_taken>63.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Select assign pattern (_, constant)">1</id><querystr><![CDATA[assign a; Select a pattern a (_, _"16"_)]]></querystr>
+<stuans>13,34,24</stuans>
+<correct>13,24,34</correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Select assign pattern (_, _variable_)">2</id><querystr><![CDATA[assign a; Select a pattern a (_, _"b"_)]]></querystr>
+<stuans>7,27,6,26,39,8,19,9,36,37</stuans>
+<correct>19,26,27,36,37,39,6,7,8,9</correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Select assign pattern (_, _variable_) does not exist">3</id><querystr><![CDATA[assign a; Select BOOLEAN pattern a (_, _"salkfjask"_)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="3" Pattern="1" CondNum="5" RelNum="0" comment="Select assign pattern (variable, _) and (_, variable)">4</id><querystr><![CDATA[assign a; Select a pattern a ("b", _) and a (_, _"a"_)]]></querystr>
+<stuans>7,29,20</stuans>
+<correct>20,29,7</correct>
+<time_taken>67.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Select variable-variable tuple with pattern">5</id><querystr><![CDATA[assign a1; assign a2; Select <a1, a2> pattern a1 ("a", _) and a2 ("b", _"a"_)]]></querystr>
+<stuans>27 29,27 20,19 29,23 20,6 7,27 7,19 20,6 20,6 29,19 7,18 20,8 7,8 29,8 20,37 7,37 20,18 7,37 29,18 29,23 29,23 7</stuans>
+<correct>18 20,18 29,18 7,19 20,19 29,19 7,23 20,23 29,23 7,27 20,27 29,27 7,37 20,37 29,37 7,6 20,6 29,6 7,8 20,8 29,8 7</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Select assign pattern by expression">6</id><querystr><![CDATA[assign a; Select a pattern a (_, _"x+a"_)]]></querystr>
+<stuans>12,33,39</stuans>
+<correct>12,33,39</correct>
+<time_taken>70.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Select assign pattern by expression">7</id><querystr><![CDATA[assign a; Select a pattern a (_, _"a-b"_)]]></querystr>
+<stuans>7,8,36</stuans>
+<correct>36,7,8</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Select assign pattern by expression not exist">8</id><querystr><![CDATA[assign a; Select a pattern a (_, _"b+a"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Select assign pattern by expression not exist">9</id><querystr><![CDATA[assign a; Select a pattern a (_, _"a*b"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>60.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Select variable in if pattern">10</id><querystr><![CDATA[if ifs; variable v; Select v pattern ifs (v, _, _)]]></querystr>
+<stuans>b,a,c</stuans>
+<correct>a,b,c</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Select variable in if pattern">11</id><querystr><![CDATA[if ifs; variable v; Select v pattern ifs (v, _, _)]]></querystr>
+<stuans>b,c,a</stuans>
+<correct>a,b,c</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="3" Pattern="1" CondNum="5" RelNum="0" comment="Select variable in if pattern">12</id><querystr><![CDATA[if ifs; variable v; Select ifs pattern ifs (_, _, _)]]></querystr>
+<stuans>10,21,31,17,16,14,15</stuans>
+<correct>10,14,15,16,17,21,31</correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="Select while pattern">13</id><querystr><![CDATA[while w; Select w pattern w ("b", _)]]></querystr>
+<stuans>35,25</stuans>
+<correct>25,35</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="Select while pattern">14</id><querystr><![CDATA[while w; Select w pattern w (_, _)]]></querystr>
+<stuans>35,25,32,11</stuans>
+<correct>11,25,32,35</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="Select while pattern">15</id><querystr><![CDATA[while w; variable v; Select v pattern w (v, _)]]></querystr>
+<stuans>c,b,x</stuans>
+<correct>b,c,x</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

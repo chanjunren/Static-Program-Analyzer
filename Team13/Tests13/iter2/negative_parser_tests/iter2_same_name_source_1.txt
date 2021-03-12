@@ -1,0 +1,7 @@
+procedure Same {
+	x = 1;
+}
+
+procedure Same {
+	y = 2;
+}

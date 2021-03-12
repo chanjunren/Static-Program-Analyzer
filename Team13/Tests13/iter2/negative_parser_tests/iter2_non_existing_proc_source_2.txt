@@ -1,0 +1,7 @@
+procedure GhostProc {
+	call Ghost;
+	call Jesus;
+	call Satan;
+	
+	x = 1;
+}

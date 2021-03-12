@@ -1,0 +1,155 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>iter2</name><parsing_time_taken>250.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Modifies="2" SuchThat="2" CondNum="5" RelNum="2" comment="modifies, modifies">1</id><querystr><![CDATA[variable v; Select v such that Modifies("procA", v) such that Modifies(3, v)]]></querystr>
+<stuans>y,bA,dAAA,bD,file,uniA,x,dA,k,z</stuans>
+<correct>bA,bD,dA,dAAA,file,k,uniA,x,y,z</correct>
+<time_taken>64.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" Uses="1" SuchThat="2" CondNum="5" RelNum="2" comment="modifies, uses">2</id><querystr><![CDATA[stmt s; variable v; procedure p; Select v such that Modifies(s, v) such that Uses(p, v)]]></querystr>
+<stuans>y,a,bA,ifVar,bD,uniC,z,b,ifB,x,c,uniA,dAAA,k,file,ifA</stuans>
+<correct>a,b,bA,bD,c,dAAA,file,ifA,ifB,ifVar,k,uniA,uniC,x,y,z</correct>
+<time_taken>111.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="uses">3</id><querystr><![CDATA[procedure p; variable v; Select v such that Uses(p, v)]]></querystr>
+<stuans>y,a,bA,result,m,dF,p,bD,d,dB,dBBB,ifVar,EEEEE,q,bB,bBBB,b,dc,ifVar3,r,dD,abc,bC,c,ab,x,file,ifVar2,min,z,ifC,ai,a1,max,dAAA,b1,o,e,uniB,ifD,dC,bAAA,uniC,uniA,ifB,k,cA,dE,ifA</stuans>
+<correct>EEEEE,a,a1,ab,abc,ai,b,b1,bA,bAAA,bB,bBBB,bC,bD,c,cA,d,dAAA,dB,dBBB,dC,dD,dE,dF,dc,e,file,ifA,ifB,ifC,ifD,ifVar,ifVar2,ifVar3,k,m,max,min,o,p,q,r,result,uniA,uniB,uniC,x,y,z</correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="modifies">4</id><querystr><![CDATA[stmt s; variable v; Select v such that Modifies(s, v)]]></querystr>
+<stuans>y,a,bA,z,b,c,n,uniA,ifVar,x,bD,file,k,dA,ifA,dAAA,ifB,uniC,procC</stuans>
+<correct>a,b,bA,bD,c,dA,dAAA,file,ifA,ifB,ifVar,k,n,procC,uniA,uniC,x,y,z</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" Uses="1" SuchThat="2" CondNum="5" RelNum="2" comment="uses, modifies">5</id><querystr><![CDATA[stmt s; variable v; procedure p; Select v such that Uses(p, v) such that Modifies(s, v)]]></querystr>
+<stuans>z,b,a,bA,y,ifB,bD,ifVar,c,uniA,x,k,ifA,file,dAAA,uniC</stuans>
+<correct>a,b,bA,bD,c,dAAA,file,ifA,ifB,ifVar,k,uniA,uniC,x,y,z</correct>
+<time_taken>106.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" Nextstar="1" Uses="1" SuchThat="2" CondNum="6" RelNum="3" comment="uses, modifies, next star">6</id><querystr><![CDATA[stmt s; variable v; procedure p; Select v such that Uses(p, v) such that Modifies(s, v) and Next*(16, s)]]></querystr>
+<stuans>a</stuans>
+<correct>a</correct>
+<time_taken>70.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="2" Uses="2" SuchThat="1" With="2" CondNum="8" RelNum="4" comment="with Modifies Uses Modifies Uses with">7</id><querystr><![CDATA[procedure p; stmt s; variable v; constant c; Select s with p.procName = "procA" such that Modifies(s, v) and Uses(s, v) and Modifies(p, v) and Uses(p, v) with s.stmt# = c.value]]></querystr>
+<stuans>3,11,13</stuans>
+<correct>3,11,13</correct>
+<time_taken>113.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="2" Uses="2" SuchThat="1" With="1" CondNum="7" RelNum="4" comment="with procA statements Modifies Uses Modifies Uses">8</id><querystr><![CDATA[procedure p; stmt s; variable v; Select s with p.procName = "procA" such that Modifies(s, v) and Uses(s, v) and Modifies(p, v) and Uses(p, v)]]></querystr>
+<stuans>4,24,11,28,37,54,56,34,3,55,20,45,29,13,62,26,57,47,58</stuans>
+<correct>11,13,20,24,26,28,29,3,34,37,4,45,47,54,55,56,57,58,62</correct>
+<time_taken>198.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="2" Uses="2" SuchThat="1" CondNum="6" RelNum="4" comment="statements Modifies Uses Modifies Uses">9</id><querystr><![CDATA[procedure p; stmt s; variable v; Select s such that Modifies(s, v) and Uses(s, v) and Modifies(p, v) and Uses(p, v)]]></querystr>
+<stuans>26,28,11,57,13,3,34,56,45,58,4,54,20,55,74,37,24,72,62,29,69,47</stuans>
+<correct>11,13,20,24,26,28,29,3,34,37,4,45,47,54,55,56,57,58,62,69,72,74</correct>
+<time_taken>322.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" Uses="1" SuchThat="1" CondNum="4" RelNum="2" comment="modified and used statements">10</id><querystr><![CDATA[procedure p; stmt s; variable v; Select s such that Modifies(s, v) and Uses(s, v)]]></querystr>
+<stuans>11,28,20,55,24,26,62,34,3,57,37,4,56,45,13,58,47,54,72,69,74,29</stuans>
+<correct>11,13,20,24,26,28,29,3,34,37,4,45,47,54,55,56,57,58,62,69,72,74</correct>
+<time_taken>144.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="2" SuchThat="1" With="1" CondNum="5" RelNum="2" comment="proc e statements">11</id><querystr><![CDATA[procedure p; print pr; variable v; Select pr such that Uses(pr, v) and Uses(p, v) with p.procName = "procE" ]]></querystr>
+<stuans>46</stuans>
+<correct>46</correct>
+<time_taken>64.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="print EEEE statements">12</id><querystr><![CDATA[print pr; variable v; Select pr such that Uses(pr, v) with "EEEEE" = v.varName]]></querystr>
+<stuans>46</stuans>
+<correct>46</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="2" SuchThat="2" CondNum="5" RelNum="2" comment="Next Next">13</id><querystr><![CDATA[while w; print pr; stmt s1; Select w such that Next(s1, w) such that Next(w, pr)]]></querystr>
+<stuans>41,62</stuans>
+<correct>41,62</correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="2" SuchThat="2" CondNum="5" RelNum="2" comment="Modifies Modifies">14</id><querystr><![CDATA[variable v; procedure p; stmt s; Select v such that Modifies(s, v) such that Modifies(p, v)]]></querystr>
+<stuans>x,y,dAAA,n,c,k,dA,z,bA,a,bD,file,b,uniA,ifB,ifA,procC,ifVar,uniC</stuans>
+<correct>a,b,bA,bD,c,dA,dAAA,file,ifA,ifB,ifVar,k,n,procC,uniA,uniC,x,y,z</correct>
+<time_taken>135.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Parentstar="1" SuchThat="1" With="1" CondNum="5" RelNum="2" comment="Parent* while, call with proc name">15</id><querystr><![CDATA[procedure p; call c; while w; Select p such that Calls("procB", p) and Parent*(w, c) with c.procName = p.procName]]></querystr>
+<stuans>procD,procE</stuans>
+<correct>procD,procE</correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="2" CondNum="5" RelNum="0" comment="pattern pattern">16</id><querystr><![CDATA[assign a; Select a pattern a("a", _"c-d"_) pattern a("a", _"b+c"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="tuple with">17</id><querystr><![CDATA[stmt s; constant cs; call c; Select <s, c> with cs.value = s.stmt# and c.procName = "procE" such that Uses(s, "file")]]></querystr>
+<stuans>9 31,9 64,9 40</stuans>
+<correct>9 31,9 40,9 64</correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="select attrRef">18</id><querystr><![CDATA[stmt s; constant cs; call c; Select <s, c.procName> with cs.value = s.stmt# and c.procName = "procE" such that Uses(s, "file")]]></querystr>
+<stuans>9 procE</stuans>
+<correct>9 procE</correct>
+<time_taken>60.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Uses="1" SuchThat="2" With="1" CondNum="7" RelNum="2" comment="tuple Uses Modifies with">19</id><querystr><![CDATA[stmt s; constant c; prog_line n; assign a; variable v; Select <s, n, v, c> such that Uses(n,"a") such that Modifies("procD", v) with s.stmt# = c.value and c.value = 1 and s.stmt# = 1]]></querystr>
+<stuans>1 20 dA 1,1 24 dAAA 1,1 14 dA 1,1 9 dAAA 1,1 9 dA 1,1 13 dA 1,1 11 dA 1,1 13 dAAA 1,1 24 dA 1,1 11 dAAA 1,1 20 dAAA 1,1 14 dAAA 1</stuans>
+<correct>1 11 dA 1,1 13 dA 1,1 14 dA 1,1 20 dA 1,1 24 dA 1,1 9 dA 1,1 11 dAAA 1,1 13 dAAA 1,1 14 dAAA 1,1 20 dAAA 1,1 24 dAAA 1,1 9 dAAA 1</correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="2" Pattern="2" SuchThat="1" CondNum="7" RelNum="1" comment="tuple Follows* pattern pattern">20</id><querystr><![CDATA[stmt s; if ifs; assign a; Select <a, ifs, s> such that Follows*(s,24) pattern ifs("y",_,_) pattern a(_,_"b+c"_)]]></querystr>
+<stuans>17 48 11,17 4 2,17 4 22,17 48 19,17 48 20,21 48 3,17 48 17,17 4 4,17 4 1,17 48 23,17 4 21,21 4 20,17 4 9,21 4 2,17 4 18,17 4 20,23 48 9,17 48 22,23 4 9,17 4 11,17 4 3,17 4 17,23 4 1,21 4 3,17 4 19,17 4 7,19 4 11,20 4 11,17 48 4,19 48 7,17 48 9,17 48 21,17 4 23,17 48 18,17 48 1,21 4 11,19 48 9,17 48 7,17 48 3,19 48 18,21 4 19,19 48 1,23 48 23,19 4 17,19 48 19,20 4 17,17 48 2,23 4 2,23 4 19,19 4 3,19 48 23,20 4 21,19 4 9,19 4 21,23 4 20,19 4 1,19 48 4,19 48 11,23 48 17,19 4 23,19 48 21,23 4 21,23 4 3,23 4 18,20 48 2,19 4 19,19 48 2,19 48 17,19 48 22,19 4 20,19 48 3,20 48 3,19 4 18,19 4 22,19 48 20,19 4 4,23 4 17,19 4 2,19 4 7,23 4 4,23 4 7,23 4 22,23 4 11,23 4 23,20 4 9,20 4 1,20 4 18,20 4 2,20 4 19,20 4 20,20 4 4,20 4 3,20 4 7,20 4 22,20 4 23,20 48 9,20 48 1,20 48 18,20 48 21,20 48 17,20 48 19,20 48 20,20 48 4,20 48 7,20 48 22,20 48 11,20 48 23,23 48 1,23 48 18,23 48 21,23 48 2,23 48 19,23 48 20,23 48 4,23 48 3,23 48 7,23 48 22,23 48 11,21 4 9,21 4 1,21 4 18,21 4 21,21 4 17,21 4 4,21 4 7,21 4 22,21 4 23,21 48 9,21 48 1,21 48 18,21 48 21,21 48 17,21 48 2,21 48 19,21 48 20,21 48 4,21 48 7,21 48 22,21 48 11,21 48 23</stuans>
+<correct>17 4 1,17 4 11,17 4 17,17 4 18,17 4 19,17 4 2,17 4 20,17 4 21,17 4 22,17 4 23,17 4 3,17 4 4,17 4 7,17 4 9,17 48 1,17 48 11,17 48 17,17 48 18,17 48 19,17 48 2,17 48 20,17 48 21,17 48 22,17 48 23,17 48 3,17 48 4,17 48 7,17 48 9,19 4 1,19 4 11,19 4 17,19 4 18,19 4 19,19 4 2,19 4 20,19 4 21,19 4 22,19 4 23,19 4 3,19 4 4,19 4 7,19 4 9,19 48 1,19 48 11,19 48 17,19 48 18,19 48 19,19 48 2,19 48 20,19 48 21,19 48 22,19 48 23,19 48 3,19 48 4,19 48 7,19 48 9,20 4 1,20 4 11,20 4 17,20 4 18,20 4 19,20 4 2,20 4 20,20 4 21,20 4 22,20 4 23,20 4 3,20 4 4,20 4 7,20 4 9,20 48 1,20 48 11,20 48 17,20 48 18,20 48 19,20 48 2,20 48 20,20 48 21,20 48 22,20 48 23,20 48 3,20 48 4,20 48 7,20 48 9,21 4 1,21 4 11,21 4 17,21 4 18,21 4 19,21 4 2,21 4 20,21 4 21,21 4 22,21 4 23,21 4 3,21 4 4,21 4 7,21 4 9,21 48 1,21 48 11,21 48 17,21 48 18,21 48 19,21 48 2,21 48 20,21 48 21,21 48 22,21 48 23,21 48 3,21 48 4,21 48 7,21 48 9,23 4 1,23 4 11,23 4 17,23 4 18,23 4 19,23 4 2,23 4 20,23 4 21,23 4 22,23 4 23,23 4 3,23 4 4,23 4 7,23 4 9,23 48 1,23 48 11,23 48 17,23 48 18,23 48 19,23 48 2,23 48 20,23 48 21,23 48 22,23 48 23,23 48 3,23 48 4,23 48 7,23 48 9</correct>
+<time_taken>122.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Followsstar="1" UnnamedVar="2" Pattern="2" SuchThat="1" CondNum="7" RelNum="1" comment="reordered">21</id><querystr><![CDATA[stmt s; if ifs; assign a; Select <s, a, ifs> such that Follows*(s,24) pattern ifs("y",_,_) pattern a(_,_"b+c"_)]]></querystr>
+<stuans>7 23 4,21 23 48,20 17 4,21 20 48,7 17 4,20 23 4,23 17 48,21 19 4,7 20 4,9 17 4,20 19 4,23 23 48,21 20 4,21 19 48,21 21 4,23 21 48,9 17 48,7 20 48,7 19 4,20 20 4,21 17 4,20 23 48,23 17 4,7 17 48,21 17 48,9 23 4,21 21 48,22 20 4,20 19 48,7 19 48,20 20 48,21 23 4,23 21 4,20 21 48,20 21 4,7 23 48,20 17 48,7 21 48,9 20 48,4 23 48,9 19 4,11 21 4,23 19 48,2 23 4,23 20 48,11 23 48,11 23 4,23 20 4,23 19 4,9 19 48,9 23 48,1 20 48,11 21 48,23 23 4,9 20 4,17 17 4,11 17 48,7 21 4,1 20 4,11 17 4,22 20 48,11 20 4,11 19 4,9 21 48,11 19 48,11 20 48,9 21 4,2 23 48,3 23 4,3 23 48,3 19 4,3 19 48,19 19 4,19 19 48,2 20 4,2 20 48,18 23 48,2 19 4,2 19 48,1 17 4,1 17 48,19 20 4,19 20 48,1 23 4,1 23 48,18 23 4,19 21 4,19 21 48,19 17 4,19 17 48,4 20 4,18 21 4,4 20 48,2 21 4,2 21 48,3 21 4,3 21 48,19 23 4,19 23 48,3 17 4,3 17 48,18 17 4,18 17 48,22 23 4,22 23 48,4 19 48,22 19 4,22 19 48,4 19 4,3 20 4,3 20 48,18 21 48,17 19 48,22 17 4,22 17 48,2 17 4,2 17 48,1 19 4,1 19 48,18 20 4,18 20 48,22 21 4,22 21 48,1 21 4,1 21 48,18 19 4,18 19 48,4 17 4,4 17 48,4 23 4,4 21 4,4 21 48,17 19 4,17 20 4,17 20 48,17 17 48,17 23 4,17 23 48,17 21 4,17 21 48</stuans>
+<correct>1 17 4,1 17 48,1 19 4,1 19 48,1 20 4,1 20 48,1 21 4,1 21 48,1 23 4,1 23 48,11 17 4,11 17 48,11 19 4,11 19 48,11 20 4,11 20 48,11 21 4,11 21 48,11 23 4,11 23 48,17 17 4,17 17 48,17 19 4,17 19 48,17 20 4,17 20 48,17 21 4,17 21 48,17 23 4,17 23 48,18 17 4,18 17 48,18 19 4,18 19 48,18 20 4,18 20 48,18 21 4,18 21 48,18 23 4,18 23 48,19 17 4,19 17 48,19 19 4,19 19 48,19 20 4,19 20 48,19 21 4,19 21 48,19 23 4,19 23 48,2 17 4,2 17 48,2 19 4,2 19 48,2 20 4,2 20 48,2 21 4,2 21 48,2 23 4,2 23 48,20 17 4,20 17 48,20 19 4,20 19 48,20 20 4,20 20 48,20 21 4,20 21 48,20 23 4,20 23 48,21 17 4,21 17 48,21 19 4,21 19 48,21 20 4,21 20 48,21 21 4,21 21 48,21 23 4,21 23 48,22 17 4,22 17 48,22 19 4,22 19 48,22 20 4,22 20 48,22 21 4,22 21 48,22 23 4,22 23 48,23 17 4,23 17 48,23 19 4,23 19 48,23 20 4,23 20 48,23 21 4,23 21 48,23 23 4,23 23 48,3 17 4,3 17 48,3 19 4,3 19 48,3 20 4,3 20 48,3 21 4,3 21 48,3 23 4,3 23 48,4 17 4,4 17 48,4 19 4,4 19 48,4 20 4,4 20 48,4 21 4,4 21 48,4 23 4,4 23 48,7 17 4,7 17 48,7 19 4,7 19 48,7 20 4,7 20 48,7 21 4,7 21 48,7 23 4,7 23 48,9 17 4,9 17 48,9 19 4,9 19 48,9 20 4,9 20 48,9 21 4,9 21 48,9 23 4,9 23 48</correct>
+<time_taken>126.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

@@ -1,0 +1,15 @@
+procedure SameOne {
+	x = 1;
+}
+
+procedure SameTwo {
+	x = 2;
+}
+
+procedure SameOne {
+	x = 3;
+}
+
+procedure SameTwo {
+	x = 4;
+}

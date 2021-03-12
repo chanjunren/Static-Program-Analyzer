@@ -1,0 +1,47 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>iter3</name><parsing_time_taken>26.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Select variable modified in if container and Many Tabs">1</id><querystr><![CDATA[variable 	v; 	if 	ifs; Select	 v 		such that 	Modifies 	(ifs, v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>29.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select variable modified in while container and alot whitespace">2</id><querystr><![CDATA[variable v;     while                   w; Select       v          such that       Modifies       (w, v)]]></querystr>
+<stuans></stuans>
+<correct>b,k,x,a,c</correct>
+<time_taken>29.000000</time_taken>
+<failed>
+<missing>a,b,c,k,x</missing>
+<additional></additional>
+<summary>
+<expected>5</expected>
+<matched>0</matched>
+<missing>5</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="Select variable modified in while container and even more whitespace">3</id><querystr><![CDATA[variable                                    v       ;         while                   w       ; Select                    v                   such that                 Modifies             (              w          ,       v       )]]></querystr>
+<stuans></stuans>
+<correct>b,k,x,a,c</correct>
+<time_taken>30.000000</time_taken>
+<failed>
+<missing>a,b,c,k,x</missing>
+<additional></additional>
+<summary>
+<expected>5</expected>
+<matched>0</matched>
+<missing>5</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+</queries>
+</test_results>

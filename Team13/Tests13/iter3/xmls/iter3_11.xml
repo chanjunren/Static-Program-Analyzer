@@ -1,0 +1,22 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>iter3</name><parsing_time_taken>77.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Select all if statements">1</id><querystr><![CDATA[if ifs; Select ifs]]></querystr>
+<stuans>10,21,14,16,15,17,31</stuans>
+<correct>10,14,15,16,17,21,31</correct>
+<time_taken>33.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Select all while statements">2</id><querystr><![CDATA[while w; Select w]]></querystr>
+<stuans>11,25,32,35</stuans>
+<correct>11,25,32,35</correct>
+<time_taken>36.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

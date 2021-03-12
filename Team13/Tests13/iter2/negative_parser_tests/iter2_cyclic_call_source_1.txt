@@ -1,0 +1,8 @@
+procedure Cyclic {
+	call CyclicOne;	
+}
+
+procedure CyclicOne {
+	call Cyclic;
+}
+

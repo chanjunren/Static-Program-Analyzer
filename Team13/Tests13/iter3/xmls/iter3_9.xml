@@ -1,0 +1,176 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>iter3</name><parsing_time_taken>34.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnBoolean="1" Follows="1" SuchThat="1" CondNum="3" RelNum="1" comment="invalid semantics but valid syntax - entref instead of stmtref in first arg">1</id><querystr><![CDATA[stmt s; procedure p; Select BOOLEAN such that Follows ( p , 10 )]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>35.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Pattern="1" CondNum="2" RelNum="0" comment="invalid semantics but valid syntax - stmtref instead of entref in assign pattern">2</id><querystr><![CDATA[assign a; stmt s; Select BOOLEAN pattern a ( s , "x" )]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>36.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="invalid semantics but valid syntax - undeclared synonym in first argument">3</id><querystr><![CDATA[assign a; Select BOOLEAN such that Modifies ( sdfsdf , "x")]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="invalid semantics but valid syntax - with clause synonym not type prog_line">4</id><querystr><![CDATA[variable v; Select BOOLEAN with v = "x"]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>34.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="invalid semantics but valid syntax - undeclared synonym inside with clause">5</id><querystr><![CDATA[stmt s; Select BOOLEAN with s1.stmt# = 20]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="invalid semantics but valid syntax - mismatching attrRef types">6</id><querystr><![CDATA[stmt s; procedure p; Select BOOLEAN with s.stmt# = p.stmt#]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" With="1" CondNum="2" RelNum="0" comment="invalid semantics but valid syntax - mismatching attrRef types">7</id><querystr><![CDATA[constant c; Select BOOLEAN with c.varName = "x"]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Follows="1" SuchThat="1" CondNum="3" RelNum="1" comment="invalid semantics but valid syntax - undeclared synonym in second argument">8</id><querystr><![CDATA[stmt s; if ifs; Select BOOLEAN such that Follows ( ifs, blah )]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>37.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="invalid semantics but valid syntax - stmtref instead of entref in while pattern">9</id><querystr><![CDATA[call cl; while w; Select BOOLEAN pattern w (cl, _)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>37.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="invalid syntax, assign pattern type with 3 args">10</id><querystr><![CDATA[assign a; if ifs; variable v; Select BOOLEAN pattern a (v, _, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Parent="1" SuchThat="1" CondNum="3" RelNum="1" comment="syntax error : string found in 2nd arg of parent clause">11</id><querystr><![CDATA[stmt s; procedure p; Select BOOLEAN such that Parent ( 12 , "x" )]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" CondNum="1" RelNum="0" comment="invalid semantics but valid syntax - redeclared synonym in same declaration">12</id><querystr><![CDATA[stmt s, s; Select BOOLEAN]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>37.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" CondNum="1" RelNum="0" comment="invalid semantics but valid syntax - redeclared synonym in different declaration">13</id><querystr><![CDATA[stmt s; procedure p; assign s; Select BOOLEAN]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" CondNum="1" RelNum="0" comment="invalid semantics but valid syntax - redeclared synonym in different declarations and multiple declarations">14</id><querystr><![CDATA[stmt s, s1, s2, s3; procedure p; call c, c2, c3, c4, c5, s, c6; Select BOOLEAN]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="invalid semantics but valid syntax - underscore as first arg of Uses">15</id><querystr><![CDATA[stmt s; Select BOOLEAN such that Uses ( _ , "x")]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="invalid semantics but valid syntax - underscore as first arg of Modifies">16</id><querystr><![CDATA[stmt s; Select BOOLEAN such that Modifies ( _ , "x")]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid - ModifiesS">17</id><querystr><![CDATA[stmt s, s1; Select BOOLEAN such that Modifies ( s , "x")]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="invalid semantics but valid syntax - stmtref instead of entref in second arg of uses">18</id><querystr><![CDATA[stmt s, s1; Select BOOLEAN such that Uses ( "y" , s1)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="invalid semantics but valid syntax - stmtref instead of entref in second arg of calls">19</id><querystr><![CDATA[stmt s; Select BOOLEAN such that Calls ("x" , s) ]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" SuchThat="1" CondNum="3" RelNum="1" comment="invalid semantics but valid syntax - entref instead of stmt ref in first arg of Affects">20</id><querystr><![CDATA[procedure p; Select BOOLEAN such that Affects (p, 10)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id Affects="1" ReturnBoolean="1" SuchThat="1" CondNum="3" RelNum="1" comment="invalid semantics but found invalid syntax afterwards - BOOLEAN should output none as syntax error">21</id><querystr><![CDATA[procedure p, p; Select BOOLEAN such that Affects([], 100)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>37.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="invalid semantics but valid syntax - variable inside Calls">22</id><querystr><![CDATA[variable v; procedure cl; Select BOOLEAN such that Calls (v, "procA")]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="invalid semantics but valid syntax - variable inside Calls">23</id><querystr><![CDATA[variable v; procedure cl; Select BOOLEAN such that Calls (_, "procA")]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Uses="1" SuchThat="1" CondNum="4" RelNum="1" comment="invalid semantics but valid syntax - underscore as first arg of Uses">24</id><querystr><![CDATA[stmt s; Select BOOLEAN such that Uses ( _ , "x")]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

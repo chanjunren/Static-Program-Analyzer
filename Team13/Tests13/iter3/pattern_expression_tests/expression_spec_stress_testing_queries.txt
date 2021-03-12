@@ -1,0 +1,15 @@
+1 - valid expression, alot of brackets
+assign a;
+Select a pattern a ( _ , " x + (((((((((((   y   )))))))))))   " )
+1
+5000
+2 - valid expression, alot of terms and operators
+assign a;
+Select a pattern a ( _ , " z / y/asdjlks  * xx + qqqq - m12345 * (  z + 100000000/2/2/2/2/2/2/2/2/2 ) %x%x%x%x%z%z%z / QWERQWERQWER   " )
+2
+5000
+3 - valid expression, alot of terms and operators
+assign a;
+Select a pattern a ( _ , " z     +   1    +     y      " )
+3
+5000

@@ -1,0 +1,960 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>iter2</name><parsing_time_taken>614.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnBoolean="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 int)">1</id><querystr><![CDATA[ Select BOOLEAN such that Next*(25, 26)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>107.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 int)">2</id><querystr><![CDATA[ Select BOOLEAN such that Next*(47, 55)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>104.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 int)">3</id><querystr><![CDATA[ Select BOOLEAN such that Next*(34, 44)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>68.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 int)">4</id><querystr><![CDATA[ Select BOOLEAN such that Next*(42, 39)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>84.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 int)">5</id><querystr><![CDATA[ Select BOOLEAN such that Next*(12, 17)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>64.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 int)">6</id><querystr><![CDATA[ Select BOOLEAN such that Next*(55, 59)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>60.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 int)">7</id><querystr><![CDATA[ Select BOOLEAN such that Next*(70, 78)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 int)">8</id><querystr><![CDATA[ Select BOOLEAN such that Next*(30, 45)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 int)">9</id><querystr><![CDATA[ Select BOOLEAN such that Next*(32, 45)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 int)">10</id><querystr><![CDATA[ Select BOOLEAN such that Next*(43, 34)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 int)">11</id><querystr><![CDATA[ Select BOOLEAN such that Next*(54, 60)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 int)">12</id><querystr><![CDATA[ Select BOOLEAN such that Next*(41,39)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (int, synonym)">13</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(32, s2)]]></querystr>
+<stuans>45</stuans>
+<correct>45</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (int, synonym)">14</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(1, s2)]]></querystr>
+<stuans>3,9,18,21,11,20,19,2,17,7,5,15,4,14,6,8,10,12,16,24,13,22,23</stuans>
+<correct>2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (int, synonym)">15</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(7, s2)]]></querystr>
+<stuans>13,9,10,7,20,19,8,17,15,11,14,12,21,18,16,22,23,24</stuans>
+<correct>7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (int, synonym)">16</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(9, s2)]]></querystr>
+<stuans>12,10,18,21,9,11,13,14,15,17,16,22,23,24,20,19</stuans>
+<correct>9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (int, synonym)">17</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(12, s2)]]></querystr>
+<stuans>17,20,19,22,21,18,23,24</stuans>
+<correct>17,18,19,20,21,22,23,24</correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (int, synonym)">18</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(30, s2)]]></querystr>
+<stuans>45</stuans>
+<correct>45</correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (int, synonym)">19</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(39, s2)]]></querystr>
+<stuans>45,34,42,44,41,40,39,36,38,35,37,43</stuans>
+<correct>34,35,36,37,38,39,40,41,42,43,44,45</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (int, synonym)">20</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(34, s2)]]></querystr>
+<stuans>35,44,36,34,45,43,39,37,38,41,40,42</stuans>
+<correct>44,35,34,36,37,38,39,40,41,42,43,45</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (int, synonym)">21</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(41, s2)]]></querystr>
+<stuans>36,44,35,34,42,40,39,37,38,41,43,45</stuans>
+<correct>42,39,34,35,36,37,38,40,41,43,44,45</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (int, synonym)">22</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(42, s2)]]></querystr>
+<stuans>40,39,41,38,42,35,44,34,37,36,45,43</stuans>
+<correct>41,34,35,36,37,38,39,40,42,43,44,45</correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (int, synonym)">23</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(43, s2)]]></querystr>
+<stuans>38,35,44,37,43,39,34,36,40,41,45,42</stuans>
+<correct>34,35,36,37,38,39,40,41,42,43,44,45</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (int, synonym)">24</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(52, s2)]]></querystr>
+<stuans>54,52,53,60,61</stuans>
+<correct>53,54,52,60,61</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (synonym, int)">25</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(s2, 7)]]></querystr>
+<stuans>5,6,7,1,4,2,3,8</stuans>
+<correct>5,6,8,1,2,3,4,7</correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (synonym, int)">26</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(s2, 8)]]></querystr>
+<stuans>7,5,8,6,2,4,3,1</stuans>
+<correct>1,2,3,4,5,6,7,8</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (synonym, int)">27</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(s2, 17)]]></querystr>
+<stuans>12,3,7,16,4,15,13,14,11,6,8,10,9,5,2,1</stuans>
+<correct>1,10,11,12,13,14,15,16,2,3,4,5,6,7,8,9</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (synonym, int)">28</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(s2, 45)]]></querystr>
+<stuans>33,25,32,38,30,26,37,34,29,28,27,44,39,31,43,36,41,35,42,40</stuans>
+<correct>25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44</correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (synonym, int)">29</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(s2, 44)]]></querystr>
+<stuans>43,38,35,33,42,34,26,37,40,39,41,36,25</stuans>
+<correct>25,26,33,34,35,36,37,38,39,40,41,42,43</correct>
+<time_taken>120.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (synonym, int)">30</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(s2, 34)]]></querystr>
+<stuans>39,37,33,35,25,43,36,34,38,41,40,42,26</stuans>
+<correct>25,26,33,34,35,36,37,38,39,40,41,42,43</correct>
+<time_taken>95.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (synonym, int)">31</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(s2, 39)]]></querystr>
+<stuans>38,41,26,39,42,43,34,36,40,37,35,33,25</stuans>
+<correct>25,26,33,34,35,36,37,38,39,40,41,42,43</correct>
+<time_taken>64.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (synonym, int)">32</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(s2, 41)]]></querystr>
+<stuans>39,40,41,38,35,37,42,36,34,26,33,43,25</stuans>
+<correct>25,26,33,34,35,36,37,38,39,40,41,42,43</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (synonym, int)">33</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(s2, 52)]]></querystr>
+<stuans>52,49,48,53,51,47,50</stuans>
+<correct>47,48,49,50,51,52,53</correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (synonym, int)">34</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(s2, 60)]]></querystr>
+<stuans>57,58,50,47,54,59,56,55,53,52,49,51,48</stuans>
+<correct>47,48,49,50,51,52,53,54,55,56,57,58,59</correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (synonym, int)">35</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(s2, 57)]]></querystr>
+<stuans>56,58,47,57,55</stuans>
+<correct>56,58,47,55,57</correct>
+<time_taken>167.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (synonym, int)">36</id><querystr><![CDATA[stmt s2;  Select s2 such that Next*(s2, 74)]]></querystr>
+<stuans>72,71,68,69</stuans>
+<correct>72,68,69,71</correct>
+<time_taken>73.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 synonym)">37</id><querystr><![CDATA[stmt s1, s2; Select s1 such that Next*(s1, s2)]]></querystr>
+<stuans>25,50,72,36,1,26,53,17,48,51,41,39,62,55,19,20,65,9,15,59,13,28,11,10,29,66,49,47,27,16,38,43,56,23,34,3,5,69,32,33,68,4,44,2,35,14,58,57,22,8,64,71,40,37,31,6,18,21,12,73,7,74,42,70,52,76,63,77,60,30,75,54</stuans>
+<correct>1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,47,48,49,5,50,51,52,53,54,55,56,57,58,59,6,60,62,63,64,65,66,68,69,7,70,71,72,73,74,75,76,77,8,9</correct>
+<time_taken>96.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 synonym)">38</id><querystr><![CDATA[stmt s1; assign a; Select a such that Next*(s1, a)]]></querystr>
+<stuans>17,14,58,77,35,18,54,21,56,23,19,20,51,24,16,10,22,67,75,76,53,12,5,66,71,6,8,60,73,70,36,44,63,59,50,27,33</stuans>
+<correct>10,12,14,16,17,18,19,20,21,22,23,24,27,33,35,36,44,5,50,51,53,54,56,58,59,6,60,63,66,67,70,71,73,75,76,77,8</correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 synonym)">39</id><querystr><![CDATA[stmt s2; assign a; Select a such that Next*(a, s2)]]></querystr>
+<stuans>17,5,14,58,22,44,33,36,54,18,21,56,23,63,51,66,8,16,76,10,12,27,19,20,60,6,71,73,75,35,50,53,59,70,77</stuans>
+<correct>10,12,14,16,17,18,19,20,21,22,23,27,33,35,36,44,5,50,51,53,54,56,58,59,6,60,63,66,70,71,73,75,76,77,8</correct>
+<time_taken>71.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 synonym)">40</id><querystr><![CDATA[stmt s1; while w; Select w such that Next*(s1, w)]]></querystr>
+<stuans>9,7,52,49,41,34,39,62,57,55</stuans>
+<correct>34,39,41,49,52,55,57,62,7,9</correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 synonym)">41</id><querystr><![CDATA[stmt s2; while w; Select w such that Next*(w, s2)]]></querystr>
+<stuans>49,41,7,39,62,9,34,57,52,55</stuans>
+<correct>34,39,41,49,52,55,57,62,7,9</correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 synonym)">42</id><querystr><![CDATA[stmt s1; if ifs; Select ifs such that Next*(s1, ifs)]]></querystr>
+<stuans>72,38,11,28,26,69,4,13,74,48</stuans>
+<correct>11,13,26,28,38,4,48,69,72,74</correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 synonym)">43</id><querystr><![CDATA[stmt s2; if ifs; Select ifs such that Next*(ifs, s2)]]></querystr>
+<stuans>28,11,4,69,26,72,13,38,47,48,74</stuans>
+<correct>11,13,26,28,38,4,47,48,69,72,74</correct>
+<time_taken>69.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 synonym)">44</id><querystr><![CDATA[if ifs; assign a; Select ifs such that Next*(ifs, a)]]></querystr>
+<stuans>48,26,11,4,47,72,38,13,69,74</stuans>
+<correct>11,13,26,4,48,69,72,74,38,47</correct>
+<time_taken>123.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 synonym)">45</id><querystr><![CDATA[if ifs; read r; Select ifs such that Next*(ifs, r)]]></querystr>
+<stuans>26,28</stuans>
+<correct>26,28</correct>
+<time_taken>132.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 synonym)">46</id><querystr><![CDATA[if ifs; print pr; Select ifs such that Next*(ifs, pr)]]></querystr>
+<stuans>26,11,28,38,13,69,4,72,47,48,74</stuans>
+<correct>13,38,11,26,28,4,47,48,69,72,74</correct>
+<time_taken>75.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 synonym)">47</id><querystr><![CDATA[while w; assign a; Select w such that Next*(w, a)]]></querystr>
+<stuans>9,7,52,49,41,39,62,57,34,55</stuans>
+<correct>34,49,52,55,57,62,7,9,39,41</correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 synonym)">48</id><querystr><![CDATA[while w; read r; Select w such that Next*(w, r)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>60.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 synonym)">49</id><querystr><![CDATA[while w; print pr; Select w such that Next*(w, pr)]]></querystr>
+<stuans>34,7,41,52,49,55,39,62,9,57</stuans>
+<correct>41,62,34,39,49,52,55,57,7,9</correct>
+<time_taken>68.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 synonym)">50</id><querystr><![CDATA[while w; if ifs; Select w such that Next*(w, ifs)]]></querystr>
+<stuans>9,41,7,34,39</stuans>
+<correct>9,34,39,41,7</correct>
+<time_taken>145.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 synonym)">51</id><querystr><![CDATA[while w; if ifs; Select ifs such that Next*(w, ifs)]]></querystr>
+<stuans>11,13,38</stuans>
+<correct>11,13,38</correct>
+<time_taken>92.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 synonym)">52</id><querystr><![CDATA[while w; if ifs; Select ifs such that Next*(ifs, w)]]></querystr>
+<stuans>4,47,38,48,26</stuans>
+<correct>38,47,48,26,4</correct>
+<time_taken>70.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 synonym)">53</id><querystr><![CDATA[while w; if ifs; Select w such that Next*(ifs, w)]]></querystr>
+<stuans>57,7,52,49,41,39,34,9,55</stuans>
+<correct>39,49,55,34,41,52,57,7,9</correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 synonym)">54</id><querystr><![CDATA[assign a1, a2; Select a1 such that Next*(a1, a2)]]></querystr>
+<stuans>20,19,58,14,50,5,17,6,56,23,66,18,54,21,33,35,22,10,16,8,12,36,51,53,59,63,71,75,76</stuans>
+<correct>12,14,16,17,18,19,20,21,22,23,35,54,59,66,75,76,10,33,36,5,50,51,53,56,58,6,63,71,8</correct>
+<time_taken>72.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="valid query Next* (2 synonym)">55</id><querystr><![CDATA[call c; stmt s1; Select s1 such that Next*(s1, c)]]></querystr>
+<stuans>29,1,36,34,32,39,62,30,2,35,26,25,27,28,38,63,31,43,33,37,44,40,41,42,64</stuans>
+<correct>2,28,30,32,36,39,44,63,1,25,26,27,29,31,33,34,35,37,38,40,41,42,43,62,64</correct>
+<time_taken>64.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query Next* (2 synonym)">56</id><querystr><![CDATA[stmt s1; prog_line l; Select s1 such that Next*(s1, l)]]></querystr>
+<stuans>6,17,35,2,65,9,29,10,55,19,20,37,7,30,25,50,33,4,68,1,36,15,34,3,8,64,16,28,11,38,63,13,53,26,66,60,43,41,14,58,42,18,54,21,62,39,52,27,40,23,56,47,74,72,57,22,5,69,32,71,75,73,76,48,49,12,70,51,31,44,77,59</stuans>
+<correct>1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,47,48,49,5,50,51,52,53,54,55,56,57,58,59,6,60,62,63,64,65,66,68,69,7,70,71,72,73,74,75,76,77,8,9</correct>
+<time_taken>92.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="invalid query Next* (2 synonym)">57</id><querystr><![CDATA[stmt s1; Select BOOLEAN such that Next*(s1, s1)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>71.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query Next* (int, _)">58</id><querystr><![CDATA[ Select BOOLEAN such that Next*(44, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="invalid query Next* (int, _)">59</id><querystr><![CDATA[ Select BOOLEAN such that Next*(61, _)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>89.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query Next* (_, int)">60</id><querystr><![CDATA[ Select BOOLEAN such that Next*(_, 38)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>109.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="invalid query Next* (_, int)">61</id><querystr><![CDATA[ Select BOOLEAN such that Next*(_, 1)]]></querystr>
+<stuans>FALSE</stuans>
+<correct>FALSE</correct>
+<time_taken>71.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query Next* (synonym, _)">62</id><querystr><![CDATA[stmt s1; Select s1 such that Next*(s1, _)]]></querystr>
+<stuans>28,11,8,64,56,23,3,34,9,65,7,30,20,19,55,17,69,5,32,39,62,21,18,54,15,59,66,1,36,41,68,33,4,22,57,58,14,2,35,10,29,31,6,16,25,50,12,13,44,37,60,26,53,43,48,52,42,38,63,71,49,73,40,76,51,27,72,47,70,77,74,75</stuans>
+<correct>1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,25,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,47,48,49,5,50,51,52,53,54,55,56,57,58,59,6,60,62,63,64,65,66,68,69,7,70,71,72,73,74,75,76,77,8,9</correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="valid query Next* (_, synonym)">63</id><querystr><![CDATA[stmt s2; Select s2 such that Next*(_, s2)]]></querystr>
+<stuans>18,21,54,9,65,66,13,7,30,11,28,32,5,69,34,3,22,57,70,15,59,33,4,10,29,67,52,27,35,2,31,6,17,20,19,55,12,38,63,40,36,53,26,71,49,62,8,50,23,56,16,51,24,60,58,14,42,61,41,48,45,43,37,44,39,64,78,72,73,74,75,76,77</stuans>
+<correct>10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,26,27,28,29,3,30,31,32,33,34,35,36,37,38,39,4,40,41,42,43,44,45,48,49,5,50,51,52,53,54,55,56,57,58,59,6,60,61,62,63,64,65,66,67,69,7,70,71,72,73,74,75,76,77,78,8,9</correct>
+<time_taken>92.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Nextstar="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="valid query Next* (_, _)">64</id><querystr><![CDATA[ Select BOOLEAN such that Next*(_, _)]]></querystr>
+<stuans>TRUE</stuans>
+<correct>TRUE</correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid argument procedure">65</id><querystr><![CDATA[procedure p; Select p such that Next*(_, p)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>111.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid argument variable">66</id><querystr><![CDATA[variable v; Select v such that Next*(_, v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid argument constant">67</id><querystr><![CDATA[constant c; Select c such that Next*(c, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" With="1" CondNum="5" RelNum="1" comment="Invalid attribute procedure name">68</id><querystr><![CDATA[procedure p; Select p such that Next*(_, p) with p.procName="Name"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>69.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" With="1" CondNum="5" RelNum="1" comment="Invalid attribute variable name">69</id><querystr><![CDATA[variable v; Select v such that Next*(v, _) with v.varName="x"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" With="1" CondNum="5" RelNum="1" comment="Invalid attribute constant value">70</id><querystr><![CDATA[constant c; Select c such that Next*(_, c) with c.value=2]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Valid line ref, invalid synonym procedure">71</id><querystr><![CDATA[procedure p; Select p such that Next*(1, p) ]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Valid line ref, invalid synonym variable">72</id><querystr><![CDATA[variable v; Select v such that Next*(1, v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Valid line ref, invalid synonym constant">73</id><querystr><![CDATA[constant c; Select c such that Next*(1, c)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>105.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Valid line ref, invalid attribute procedure">74</id><querystr><![CDATA[procedure p; Select p such that Next*(1, p) with p.procName="Name"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>108.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Valid line ref, invalid attribute variable">75</id><querystr><![CDATA[variable v; Select v such that Next*(1, v) with v.varName="x"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Valid line ref, invalid attribute constant">76</id><querystr><![CDATA[constant c; Select c such that Next*(1, c) with c.value=2]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Valid line ref, undefined synonym">77</id><querystr><![CDATA[ Select s such that Next*(1, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid wildcard, invalid synonym procedure">78</id><querystr><![CDATA[procedure p; Select p such that Next*(_, p) ]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>76.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid wildcard, invalid synonym variable">79</id><querystr><![CDATA[variable v; Select v such that Next*(_, v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>127.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid wildcard, invalid synonym constant">80</id><querystr><![CDATA[constant c; Select c such that Next*(_, c)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" With="1" CondNum="5" RelNum="1" comment="Valid wildcard, invalid attribute procedure">81</id><querystr><![CDATA[procedure p; Select p such that Next*(_, p) with p.procName="Name"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" With="1" CondNum="5" RelNum="1" comment="Valid wildcard, invalid attribute variable">82</id><querystr><![CDATA[variable v; Select v such that Next*(_, v) with v.varName="x"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" With="1" CondNum="5" RelNum="1" comment="Valid wildcard, invalid attribute constant">83</id><querystr><![CDATA[constant c; Select c such that Next*(_, c) with c.value=2]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Valid wildcard, undefined synonym">84</id><querystr><![CDATA[ Select s such that Next*(_, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Valid stmt synonym, invalid synonym procedure">85</id><querystr><![CDATA[procedure p; stmt s; Select p such that Next*(s, p) ]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Valid stmt synonym, invalid synonym variable">86</id><querystr><![CDATA[variable v; stmt s; Select v such that Next*(s, v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Valid stmt synonym, invalid synonym constant">87</id><querystr><![CDATA[constant c; stmt s; Select c such that Next*(s, c)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Valid stmt synonym, invalid attribute procedure">88</id><querystr><![CDATA[procedure p; stmt s; Select p such that Next*(s, p) with p.procName="Name"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>100.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Valid stmt synonym, invalid attribute variable">89</id><querystr><![CDATA[variable v; stmt s; Select v such that Next*(s, v) with v.varName="x"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>175.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Valid stmt synonym, invalid attribute constant">90</id><querystr><![CDATA[constant c; stmt s; Select c such that Next*(s, c) with c.value=2]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>123.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Valid stmt synonym, undefined synonym">91</id><querystr><![CDATA[stmt s; Select sy such that Next*(s, sy)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>67.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid synonym procedure, valid line ref">92</id><querystr><![CDATA[procedure p; Select p such that Next*(p, 1) ]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>126.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid synonym variable, valid line ref">93</id><querystr><![CDATA[variable v; Select v such that Next*(v, 1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>111.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid synonym constant, valid line ref">94</id><querystr><![CDATA[constant c; Select c such that Next*(c, 1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid attribute procedure, valid line ref">95</id><querystr><![CDATA[procedure p; Select p such that Next*(p, 1) with p.procName="Name"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid attribute variable, valid line ref">96</id><querystr><![CDATA[variable v; Select v such that Next*(v, 1) with v.varName="x"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid attribute constant, valid line ref">97</id><querystr><![CDATA[constant c; Select c such that Next*(c, 1) with c.value=2]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Undefined synonym, valid line ref">98</id><querystr><![CDATA[ Select s such that Next*(s, 1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid synonym procedure, valid wildcard">99</id><querystr><![CDATA[procedure p; Select p such that Next*(p, _) ]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid synonym variable, valid wildcard">100</id><querystr><![CDATA[variable v; Select v such that Next*(v, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Invalid synonym constant, valid wildcard">101</id><querystr><![CDATA[constant c; Select c such that Next*(c, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>71.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" With="1" CondNum="5" RelNum="1" comment="Invalid attribute procedure, valid wildcard">102</id><querystr><![CDATA[procedure p; Select p such that Next*(p, _) with p.procName="Name"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>138.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" With="1" CondNum="5" RelNum="1" comment="Invalid attribute variable, valid wildcard">103</id><querystr><![CDATA[variable v; Select v such that Next*(v, _) with v.varName="x"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>100.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" With="1" CondNum="5" RelNum="1" comment="Invalid attribute constant, valid wildcard">104</id><querystr><![CDATA[constant c; Select c such that Next*(c, _) with c.value=2]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>68.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Undefined synonym, valid wildcard">105</id><querystr><![CDATA[ Select s such that Next*(s, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid synonym procedure, valid stmt synonym">106</id><querystr><![CDATA[procedure p; stmt s; Select p such that Next*(p, s) ]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid synonym variable, valid stmt synonym">107</id><querystr><![CDATA[variable v; stmt s; Select v such that Next*(v, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid synonym constant, valid stmt synonym">108</id><querystr><![CDATA[constant c; stmt s; Select c such that Next*(c, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid attribute procedure, valid stmt synonym">109</id><querystr><![CDATA[procedure p; stmt s; Select p such that Next*(p, s) with p.procName="Name"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>90.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid attribute variable, valid stmt synonym">110</id><querystr><![CDATA[variable v; stmt s; Select v such that Next*(v, s) with v.varName="x"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid attribute constant, valid stmt synonym">111</id><querystr><![CDATA[constant c; stmt s; Select c such that Next*(c, s) with c.value=2]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Undefined synonym, valid stmt synonym">112</id><querystr><![CDATA[stmt s; Select sy such that Next*(sy, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid synonym procedure, invalid attribute procedure name">113</id><querystr><![CDATA[procedure p1, p2; Select p1 such that Next*(p1, p2) with p2.procName="Name"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid synonym procedure, invalid attribute variable name">114</id><querystr><![CDATA[procedure p; variable v; Select p such that Next*(p, v) with v.varName="x"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>70.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid synonym procedure, invalid attribute constant value">115</id><querystr><![CDATA[proc p; constant c; Select p such that Next*(p, c) with c.value=2]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid synonym procedure; invalid undefined synonym">116</id><querystr><![CDATA[proc p; Select p such that Next*(p, p1)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid synonym variable, invalid attribute procedure name">117</id><querystr><![CDATA[variable v; procedure p; Select v such that Next*(v, p) with p.procName="Name"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid synonym variable, invalid attribute variable name">118</id><querystr><![CDATA[variable v1, v2; Select v1 such that Next*(v1, v2) with v2.varName="x"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid synonym variable, invalid attribute constant value">119</id><querystr><![CDATA[variable v; constant c; Select v such that Next*(v, c) with c.value=2]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid synonym variable; invalid undefined synonym">120</id><querystr><![CDATA[variable v; Select v such that Next*(v, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid synonym constant, invalid attribute procedure name">121</id><querystr><![CDATA[constant c; procedure p; Select c such that Next*(c, p) with p.procName="Name"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid synonym constant, invalid attribute variable name">122</id><querystr><![CDATA[constant c; variable v; Select c such that Next*(c, v) with v.varName="x"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid synonym constant, invalid attribute constant value">123</id><querystr><![CDATA[constant c1, c2; Select c1 such that Next*(c1, c2) with c2.value=2]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid synonym constant; invalid undefined synonym">124</id><querystr><![CDATA[constant c; Select c such that Next*(p, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid attribute procedure name, invalid synonym procedure">125</id><querystr><![CDATA[procedure p1, p2; Select p2 such that Next*(p2, p1) with p2.procName="Name"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid attribute variable name, invalid synonym procedure">126</id><querystr><![CDATA[procedure p; variable v; Select v such that Next*(v, p) with v.varName="x"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid attribute constant value, invalid synonym procedure">127</id><querystr><![CDATA[proc p; constant c; Select c such that Next*(c, p) with c.value=2]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid undefined synonym, invalid synonym procedure">128</id><querystr><![CDATA[proc p; Select p1 such that Next*(p1, p)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>68.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid attribute procedure name, invalid synonym variable">129</id><querystr><![CDATA[variable v; procedure p; Select p such that Next*(p, v) with p.procName="Name"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>71.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid attribute variable name, invalid synonym variable">130</id><querystr><![CDATA[variable v1, v2; Select v2 such that Next*(v2, v1) with v2.varName="x"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid attribute constant value, invalid synonym variable">131</id><querystr><![CDATA[variable v; constant c; Select c such that Next*(c, v) with c.value=2]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="invalid undefined synonym, invalid synonym variable">132</id><querystr><![CDATA[variable v; Select s such that Next*(s, v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid attribute procedure name, invalid synonym constant">133</id><querystr><![CDATA[constant c; procedure p; Select p such that Next*(p, c) with p.procName="Name"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid attribute variable name, invalid synonym constant">134</id><querystr><![CDATA[constant c; variable v; Select v such that Next*(v, c) with v.varName="x"]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" With="1" CondNum="4" RelNum="1" comment="Invalid attribute constant value, invalid synonym constant">135</id><querystr><![CDATA[constant c1, c2; Select c2 such that Next*(c2, c1) with c2.value=2]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Invalid undefined synonym, invalid synonym constant">136</id><querystr><![CDATA[constant c; Select s such that Next*(s, c)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

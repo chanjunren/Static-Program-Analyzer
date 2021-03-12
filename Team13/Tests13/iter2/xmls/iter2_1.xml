@@ -1,0 +1,631 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>iter2</name><parsing_time_taken>31.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="wildcard, wildcard - at least 1 call stmt in the prg">1</id><querystr><![CDATA[procedure p; Select p such that Calls(_, _)]]></querystr>
+<stuans>procName,c,b,B,a,procedure,d</stuans>
+<correct>a,b,c,d,procedure,B,procName</correct>
+<time_taken>47.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="wildcard, entref - entref is called in the prg">2</id><querystr><![CDATA[procedure p; Select p such that Calls(_, "b")]]></querystr>
+<stuans>a,B,b,d,c,procName,procedure</stuans>
+<correct>a,b,c,d,procedure,B,procName</correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="(no results) wildcard, entref - entref is not called">3</id><querystr><![CDATA[procedure p; Select p such that Calls(_,"a")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="(no results) wildcard, entref - entref does not exist">4</id><querystr><![CDATA[procedure p; Select p such that Calls(_,"hello")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="wildcard, synonym - at least one call stmt in the prg">5</id><querystr><![CDATA[procedure p; Select p such that Calls(_, p)]]></querystr>
+<stuans>b,procedure,d,c</stuans>
+<correct>b,c,d,procedure</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="entref, wildcard - entref calls any proc">6</id><querystr><![CDATA[procedure p; Select p such that Calls("a", _)]]></querystr>
+<stuans>procedure,a,c,procName,B,b,d</stuans>
+<correct>a,b,c,d,procedure,B,procName</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="entref, wildcard - entref does not call any proc">7</id><querystr><![CDATA[procedure p; Select p such that Calls("d", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="entref e1, entref e2 - e1 calls e2">8</id><querystr><![CDATA[procedure p; Select p such that Calls("c", "d")]]></querystr>
+<stuans>procName,c,B,b,a,procedure,d</stuans>
+<correct>a,b,c,d,procedure,B,procName</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(no results) entref e1, entref e2 - e1 does not call e2">9</id><querystr><![CDATA[procedure p; Select p such that Calls("a", "c")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="synonym, synonym - at least 1 call stmt in prg">10</id><querystr><![CDATA[procedure p1, p2; Select p1 such that Calls(p1, p2)]]></querystr>
+<stuans>a,b,c,procName</stuans>
+<correct>a,b,c,procName</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(no result) synonym, synonym - recursive call">11</id><querystr><![CDATA[procedure p; Select p such that Calls(p, p)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="synonym, wildcard - at least 1 call stmt in prg">12</id><querystr><![CDATA[procedure p; Select p such that Calls(p, _)]]></querystr>
+<stuans>a,b,c,procName</stuans>
+<correct>a,b,c,procName</correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="synonym, entref - at least 1 call to entref">13</id><querystr><![CDATA[procedure p; Select p such that Calls(p, "c")]]></querystr>
+<stuans>b</stuans>
+<correct>b</correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(no results) synonym, entref - no calls to entref">14</id><querystr><![CDATA[procedure p; Select p such that Calls(p, "a")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) entref, stmt synonym">15</id><querystr><![CDATA[stmt s; Select s such that Calls("a", s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) entref, assgn synonym">16</id><querystr><![CDATA[assign a; Select a such that Calls("a", a)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) entref, while synonym">17</id><querystr><![CDATA[while w; Select w such that Calls("a", w)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) entref, var synonym">18</id><querystr><![CDATA[variable v; Select v such that Calls("a", v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) entref, constant synonym">19</id><querystr><![CDATA[constant c; Select c such that Calls("a", c)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) entref, call synonym">20</id><querystr><![CDATA[call cl; Select cl such that Calls("a", cl)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) entref, print synonym">21</id><querystr><![CDATA[print pn; Select pn such that Calls("a", pn)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) entref, read synonym">22</id><querystr><![CDATA[read re; Select re such that Calls("a", re)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="(semantically invalid, no results) entref, prog_line synonym">23</id><querystr><![CDATA[prog_line n; Select n such that Calls("a", n)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="(semantically invalid, no results) wildcard, stmt synonym">24</id><querystr><![CDATA[stmt s; Select s such that Calls(_, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="(semantically invalid, no results) wildcard, assgn synonym">25</id><querystr><![CDATA[assign a; Select a such that Calls(_, a)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="(semantically invalid, no results) wildcard, while synonym">26</id><querystr><![CDATA[while w; Select w such that Calls(_, w)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="(semantically invalid, no results) wildcard, var synonym">27</id><querystr><![CDATA[variable v; Select v such that Calls(_, v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="(semantically invalid, no results) wildcard, constant synonym">28</id><querystr><![CDATA[constant c; Select c such that Calls(_, c)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="(semantically invalid, no results) wildcard, call synonym">29</id><querystr><![CDATA[call cl; Select cl such that Calls(_, cl)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="(semantically invalid, no results) wildcard, print synonym">30</id><querystr><![CDATA[print pn; Select pn such that Calls(_, pn)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="(semantically invalid, no results) wildcard, read synonym">31</id><querystr><![CDATA[read re; Select re such that Calls(_, re)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="2" SuchThat="1" CondNum="5" RelNum="1" comment="(semantically invalid, no results) wildcard, prog_line synonym">32</id><querystr><![CDATA[prog_line n; Select n such that Calls(_, n)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, stmt synonym">33</id><querystr><![CDATA[procedure p; stmt s; Select s such that Calls(p, s)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, assgn synonym">34</id><querystr><![CDATA[procedure p; assign a; Select a such that Calls(p, a)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, while synonym">35</id><querystr><![CDATA[procedure p; while w; Select w such that Calls(p, w)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, var synonym">36</id><querystr><![CDATA[procedure p; variable v; Select v such that Calls(p, v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, constant synonym">37</id><querystr><![CDATA[procedure p; constant c; Select c such that Calls(p, c)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, call synonym">38</id><querystr><![CDATA[procedure p; call cl;  Select cl such that Calls(p, cl)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>63.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, print synonym">39</id><querystr><![CDATA[procedure p; print pn; Select pn such that Calls(p, pn)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>70.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, read synonym">40</id><querystr><![CDATA[procedure p; read re; Select re such that Calls(p, re)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="(semantically invalid, no results) proc synonym, prog_line synonym">41</id><querystr><![CDATA[procedure p; prog_line n; Select n such that Calls(p, n)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, attRef">42</id><querystr><![CDATA[procedure p; Select p such that Calls(p, p.procname)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, attRef">43</id><querystr><![CDATA[procedure p; call cl; Select p such that Calls(p, cl.procName)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, attRef">44</id><querystr><![CDATA[procedure p; variable v; Select v such that Calls(p, v.varName)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, attRef">42</id><querystr><![CDATA[procedure p; Select p such that Calls(p, p.procname)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, attRef">43</id><querystr><![CDATA[procedure p; call cl; Select p such that Calls(p, cl.procName)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, attRef">44</id><querystr><![CDATA[procedure p; variable v; Select v such that Calls(p, v.varName)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, attRef">45</id><querystr><![CDATA[procedure p, read re; Select p such that Calls(p, re.varName)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, attRef">46</id><querystr><![CDATA[procedure p; print pn; Select p such that Calls(p, pn.varName)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, attRef">47</id><querystr><![CDATA[procedure p; constant c; Select v such that Calls(p, c.value)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, attRef">48</id><querystr><![CDATA[procedure p; stmt s; Select p such that Calls(p, s.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, attRef">49</id><querystr><![CDATA[procedure p; read re; Select p such that Calls(p, re.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, attRef">50</id><querystr><![CDATA[procedure p; print pn; Select v such that Calls(p, pn.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, attRef">51</id><querystr><![CDATA[procedure p; call cl; Select p such that Calls(p, cl.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, attRef">52</id><querystr><![CDATA[procedure p; while w; Select p such that Calls(p, w.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, attRef">53</id><querystr><![CDATA[procedure p; if ifs; Select v such that Calls(p, ifs.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc synonym, attRef">54</id><querystr><![CDATA[procedure p; assign a; Select v such that Calls(p, a.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>48.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) wildcard, attRef">55</id><querystr><![CDATA[procedure p; Select p such that Calls("a", p.procname)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) wildcard, attRef">56</id><querystr><![CDATA[procedure p; call cl; Select p such that Calls("a", cl.procName)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) wildcard, attRef">57</id><querystr><![CDATA[procedure p; variable v; Select v such that Calls("a", v.varName)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) wildcard, attRef">58</id><querystr><![CDATA[procedure p; Select p such that Calls("a", p.procname)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>39.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) wildcard, attRef">59</id><querystr><![CDATA[procedure p; call cl; Select p such that Calls("a", cl.procName)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) wildcard, attRef">60</id><querystr><![CDATA[procedure p; variable v; Select v such that Calls("a", v.varName)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) wildcard, attRef">61</id><querystr><![CDATA[procedure p, read re; Select p such that Calls("a", re.varName)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>38.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) wildcard, attRef">62</id><querystr><![CDATA[procedure p; print pn; Select p such that Calls("a", pn.varName)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) wildcard, attRef">63</id><querystr><![CDATA[procedure p; constant c; Select v such that Calls("a", c.value)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>40.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) wildcard, attRef">64</id><querystr><![CDATA[procedure p; stmt s; Select p such that Calls("a", s.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) wildcard, attRef">65</id><querystr><![CDATA[procedure p; read re; Select p such that Calls("a", re.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) wildcard, attRef">66</id><querystr><![CDATA[procedure p; print pn; Select v such that Calls("a", pn.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) wildcard, attRef">67</id><querystr><![CDATA[procedure p; call cl; Select p such that Calls("a", cl.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) wildcard, attRef">68</id><querystr><![CDATA[procedure p; while w; Select p such that Calls("a", w.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) wildcard, attRef">69</id><querystr><![CDATA[procedure p; if ifs; Select v such that Calls("a", ifs.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) wildcard, attRef">70</id><querystr><![CDATA[procedure p; assign a; Select v such that Calls("a", a.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc entref, attRef">71</id><querystr><![CDATA[procedure p; Select p such that Calls("a", p.procname)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc entref, attRef">72</id><querystr><![CDATA[procedure p; call cl; Select p such that Calls("a", cl.procName)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc entref, attRef">73</id><querystr><![CDATA[procedure p; variable v; Select v such that Calls("a", v.varName)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc entref, attRef">74</id><querystr><![CDATA[procedure p; Select p such that Calls("a", p.procname)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc entref, attRef">75</id><querystr><![CDATA[procedure p; call cl; Select p such that Calls("a", cl.procName)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc entref, attRef">76</id><querystr><![CDATA[procedure p; variable v; Select v such that Calls("a", v.varName)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc entref, attRef">77</id><querystr><![CDATA[procedure p, read re; Select p such that Calls("a", re.varName)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc entref, attRef">78</id><querystr><![CDATA[procedure p; print pn; Select p such that Calls("a", pn.varName)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc entref, attRef">79</id><querystr><![CDATA[procedure p; constant c; Select v such that Calls("a", c.value)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>42.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc entref, attRef">80</id><querystr><![CDATA[procedure p; stmt s; Select p such that Calls("a", s.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc entref, attRef">81</id><querystr><![CDATA[procedure p; read re; Select p such that Calls("a", re.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc entref, attRef">82</id><querystr><![CDATA[procedure p; print pn; Select v such that Calls("a", pn.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>41.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc entref, attRef">83</id><querystr><![CDATA[procedure p; call cl; Select p such that Calls("a", cl.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>45.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc entref, attRef">84</id><querystr><![CDATA[procedure p; while w; Select p such that Calls("a", w.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc entref, attRef">85</id><querystr><![CDATA[procedure p; if ifs; Select v such that Calls("a", ifs.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>44.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" SuchThat="1" CondNum="3" RelNum="1" comment="(semantically invalid, no results) proc entref, attRef">86</id><querystr><![CDATA[procedure p; assign a; Select v such that Calls("a", a.stmt#)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>43.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

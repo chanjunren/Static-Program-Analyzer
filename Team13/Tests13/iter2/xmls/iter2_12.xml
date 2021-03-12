@@ -1,0 +1,630 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>iter2</name><parsing_time_taken>218.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="assign - variable name, partial expression">1</id><querystr><![CDATA[assign a1; Select a1 pattern a1 ("hungry", _"d"_)]]></querystr>
+<stuans>41,42</stuans>
+<correct>41,42</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="assign - synonym, partial expression">2</id><querystr><![CDATA[assign a1; variable v; Select a1 pattern a1 (v, _"d"_)]]></querystr>
+<stuans>40,41,42</stuans>
+<correct>37,40,41,42,43,44</correct>
+<time_taken>74.000000</time_taken>
+<failed>
+<missing>37,43,44</missing>
+<additional></additional>
+<summary>
+<expected>6</expected>
+<matched>3</matched>
+<missing>3</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="assign - wildcard, partial expression">3</id><querystr><![CDATA[assign a1; Select a1 pattern a1 (_, _"d"_)]]></querystr>
+<stuans>40,41,42</stuans>
+<correct>37,40,41,42,43,44</correct>
+<time_taken>64.000000</time_taken>
+<failed>
+<missing>37,43,44</missing>
+<additional></additional>
+<summary>
+<expected>6</expected>
+<matched>3</matched>
+<missing>3</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Pattern="1" CondNum="2" RelNum="0" comment="assign - variable name, full expression">4</id><querystr><![CDATA[assign a1; Select a1 pattern a1 ("hungry", "breakfast + lunch + dinner")]]></querystr>
+<stuans>37</stuans>
+<correct>37</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Pattern="1" CondNum="2" RelNum="0" comment="assign - synonym, full expression">5</id><querystr><![CDATA[assign a1; variable v; Select a1 pattern a1 (v, "breakfast + lunch + dinner")]]></querystr>
+<stuans>37</stuans>
+<correct>37,45</correct>
+<time_taken>57.000000</time_taken>
+<failed>
+<missing>45</missing>
+<additional></additional>
+<summary>
+<expected>2</expected>
+<matched>1</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="assign - wildcard, full expression">6</id><querystr><![CDATA[assign a1; Select a1 pattern a1 (_, "breakfast + lunch + dinner")]]></querystr>
+<stuans>37</stuans>
+<correct>37,45</correct>
+<time_taken>58.000000</time_taken>
+<failed>
+<missing>45</missing>
+<additional></additional>
+<summary>
+<expected>2</expected>
+<matched>1</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="assign - variable name, wildcard">7</id><querystr><![CDATA[assign a1; Select a1 pattern a1 ("hungry", _)]]></querystr>
+<stuans>37,42,41,43,48</stuans>
+<correct>48,43,42,41,37</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="assign - synonym, wildcard">8</id><querystr><![CDATA[assign a1; variable v; Select a1 pattern a1 (v, _)]]></querystr>
+<stuans>12,17,48,29,10,2,14,16,22,37,3,18,19,30,8,15,43,40,41,42,44</stuans>
+<correct>2,3,8,10,12,14,15,16,17,18,19,22,29,30,37,40,41,42,43,44,48</correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="assign - wildcard, wildcard">9</id><querystr><![CDATA[assign a1; Select a1 pattern a1 (_, _)]]></querystr>
+<stuans>19,8,10,29,12,16,14,17,3,22,2,15,43,37,18,41,44,30,48,42,40</stuans>
+<correct>2,3,8,10,12,14,15,16,17,18,19,22,29,30,37,40,41,42,43,44,48</correct>
+<time_taken>57.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="assign - full tree matching - simple expression">10</id><querystr><![CDATA[assign a; Select a pattern a (_, "hungry")]]></querystr>
+<stuans>48</stuans>
+<correct>48</correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="assign - full tree matching - simple expression with underscore">11</id><querystr><![CDATA[assign a; Select a pattern a (_, _"hungry"_)]]></querystr>
+<stuans>48</stuans>
+<correct>3</correct>
+<time_taken>68.000000</time_taken>
+<failed>
+<missing>3</missing>
+<additional>48</additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>1</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="assign - full tree matching - complex expression">12</id><querystr><![CDATA[assign a; Select a pattern a (_, "(a+b)*(a+b)*a+b*a+b/a+b%a+b")]]></querystr>
+<stuans>12</stuans>
+<correct>12</correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="3" Pattern="1" CondNum="5" RelNum="0" comment="assign - full tree matching - complex expression with underscore">13</id><querystr><![CDATA[assign a; Select a pattern a (_, _"(a+b)*(a+b)*a+b*a+b/a+b%a+b"_)]]></querystr>
+<stuans>12</stuans>
+<correct>12</correct>
+<time_taken>90.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="assign - partial tree matching - simple expression">14</id><querystr><![CDATA[assign a; Select a pattern a (_, _"shine"_)]]></querystr>
+<stuans>22,2,8</stuans>
+<correct>2</correct>
+<time_taken>72.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>22,8</additional>
+<summary>
+<expected>1</expected>
+<matched>1</matched>
+<missing>0</missing>
+<additional>2</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="3" Pattern="1" CondNum="5" RelNum="0" comment="assign - partial tree matching - simple expression">15</id><querystr><![CDATA[assign a; Select a pattern a (_, _"g * a * 2 * 1"_)]]></querystr>
+<stuans>22</stuans>
+<correct>22</correct>
+<time_taken>157.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="assign - partial tree matching - complex expression">16</id><querystr><![CDATA[assign a; Select a pattern a (_, _"c*d/c%d"_)]]></querystr>
+<stuans>40</stuans>
+<correct>40</correct>
+<time_taken>96.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="3" Pattern="1" CondNum="5" RelNum="0" comment="assign - partial tree matching - complex expression">17</id><querystr><![CDATA[assign a; Select a pattern a (_, _"(a+b)*(a+b)*a"_)]]></querystr>
+<stuans>12</stuans>
+<correct>12</correct>
+<time_taken>81.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="if - variable name">18</id><querystr><![CDATA[if ifs; Select ifs pattern ifs ("Frodo", _, _)]]></querystr>
+<stuans>6,25</stuans>
+<correct>25</correct>
+<time_taken>62.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>6</additional>
+<summary>
+<expected>1</expected>
+<matched>1</matched>
+<missing>0</missing>
+<additional>1</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="if - synonym">11</id><querystr><![CDATA[if ifs; variable v; Select ifs pattern ifs (v, _, _)]]></querystr>
+<stuans>6,25,13</stuans>
+<correct>25,13,6</correct>
+<time_taken>56.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="3" Pattern="1" CondNum="5" RelNum="0" comment="if - wildcard">12</id><querystr><![CDATA[if ifs; Select ifs pattern ifs (_, _, _)]]></querystr>
+<stuans>6,13,25</stuans>
+<correct>25,13,6</correct>
+<time_taken>66.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="while - variable name">13</id><querystr><![CDATA[while w; Select w pattern w ("lunch", _)]]></querystr>
+<stuans>36</stuans>
+<correct>36</correct>
+<time_taken>80.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="while - synonym">14</id><querystr><![CDATA[while w; variable v; Select w pattern w (v, _)]]></querystr>
+<stuans>20,32,36</stuans>
+<correct>36,32,20</correct>
+<time_taken>64.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="pattern - while - wildcard">15</id><querystr><![CDATA[while w; Select w pattern w (_, _)]]></querystr>
+<stuans>36,20,32</stuans>
+<correct>36,32,20</correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="(valid, returns none) assign - variable name, partial expression">16</id><querystr><![CDATA[assign a1; Select a1 pattern a1 ("Gandalf", _"d"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="(valid, returns none) assign - synonym, partial expression">17</id><querystr><![CDATA[assign a1; variable v; Select a1 pattern a1 (v, _"GandalfisFood"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>71.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="(valid, returns none) assign - wildcard, partial expression">18</id><querystr><![CDATA[assign a1; Select a1 pattern a1 (_, _"GandalfisFood"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>68.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Pattern="1" CondNum="2" RelNum="0" comment="(valid, returns none) assign - variable name, full expression">19</id><querystr><![CDATA[assign a1; Select a1 pattern a1 ("hungry", "breakfast + lunch + dinner + supper")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>65.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Pattern="1" CondNum="2" RelNum="0" comment="(valid, returns none) assign - synonym, full expression">20</id><querystr><![CDATA[assign a1; variable v; Select a1 pattern a1 (v, "breakfast + lunch + dinner + supper")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>61.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="(valid, returns none) assign - wildcard, full expression">21</id><querystr><![CDATA[assign a1; Select a1 pattern a1 (_, "breakfast + lunch + dinner + supper")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>62.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="(valid, returns none) assign - variable name, wildcard">22</id><querystr><![CDATA[assign a1; Select a1 pattern a1 ("a", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="(valid, returns none) assign - full tree matching - simple expression">23</id><querystr><![CDATA[assign a; Select a pattern a (_, "hungrier")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>59.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="(valid, returns none) assign - full tree matching - simple expression with underscore">24</id><querystr><![CDATA[assign a; Select a pattern a (_, _"hungrier"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>72.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="(valid, returns none) assign - full tree matching - complex expression">25</id><querystr><![CDATA[assign a; Select a pattern a (_, "(a+b)*(a+b)*a+b*a+b/a+b%a+b+1+1+1+1+1")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>138.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="3" Pattern="1" CondNum="5" RelNum="0" comment="(valid, returns none) assign - full tree matching - complex expression with underscore">26</id><querystr><![CDATA[assign a; Select a pattern a (_, _"(a+b)*(a+b)*a+b*a+b/a+b%a+b+1+1+1+1+1"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>166.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="(valid, returns none) assign - partial tree matching - simple expression">27</id><querystr><![CDATA[assign a; Select a pattern a (_, _"Foodie"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>89.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="3" Pattern="1" CondNum="5" RelNum="0" comment="(valid, returns none) assign - partial tree matching - simple expression">28</id><querystr><![CDATA[assign a; Select a pattern a (_, _"ring + 4"_)]]></querystr>
+<stuans>22</stuans>
+<correct></correct>
+<time_taken>86.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>22</additional>
+<summary>
+<expected>0</expected>
+<matched>0</matched>
+<missing>0</missing>
+<additional>1</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="3" Pattern="1" CondNum="5" RelNum="0" comment="(valid, returns none) assign - partial tree matching - complex expression">29</id><querystr><![CDATA[assign a; Select a pattern a (_, _"((shine * 6 % ring) + help) / (9 + 32)"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>126.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="3" Pattern="1" CondNum="5" RelNum="0" comment="(valid, returns none) assign - partial tree matching - complex expression">30</id><querystr><![CDATA[assign a; Select a pattern a (_, _"(a/b)/(a/b)/a/b/a/b/a/b/a/b"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>106.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="(valid, returns none) assign - partial tree matching - simple expression - no tree match (but string match)">31</id><querystr><![CDATA[assign a; Select a pattern a (_, _"c+d-c"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>85.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="(valid, returns none) assign - partial tree matching - complex expression - no tree match (but string match)">32</id><querystr><![CDATA[assign a; Select a pattern a (_, _"a+b/a+b%a+b"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>82.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="(valid, returns none) if - variable name">33</id><querystr><![CDATA[if ifs; Select ifs pattern ifs ("carrotCake", _, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="(valid, returns none) - while - variable name">34</id><querystr><![CDATA[while w; Select w pattern w ("supper", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>53.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" CondNum="3" RelNum="0" comment="(syntactically invalid, returns none) invalid permutation of the word pattern - patterN">35</id><querystr><![CDATA[assign a; Select BOOLEAN patterN a (_, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" CondNum="3" RelNum="0" comment="(syntactically invalid, returns none) invalid permutation of the word pattern - patterns">36</id><querystr><![CDATA[assign a; Select BOOLEAN patterns a (_, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>51.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" CondNum="2" RelNum="0" comment="(syntactically invalid, returns none) assign - invalid expression - synonym instead of expression">37</id><querystr><![CDATA[assign a; Select BOOLEAN Pattern a (_, a)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>50.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" CondNum="2" RelNum="0" comment="(syntactically invalid, returns none) assign - invalid expression - # of open brackets != # of close brackets">38</id><querystr><![CDATA[assign a; Select BOOLEAN Pattern a (_, "(a+b))))))))*((((((((((((a+b)")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>46.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" CondNum="2" RelNum="0" comment="(syntactically invalid, returns none) assign - invalid expression - no operator in between synonyms">39</id><querystr><![CDATA[assign a; Select BOOLEAN Pattern a (_, "(a+b)(a+b)")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Pattern="1" CondNum="2" RelNum="0" comment="(syntactically invalid, returns none) assign - too little synonyms">40</id><querystr><![CDATA[assign a; variable v; Select BOOLEAN pattern a (v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>52.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="(syntactically invalid, returns none) assign - too many synonyms">41</id><querystr><![CDATA[assign a; variable v; Select BOOLEAN pattern a (v, _, "x")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>55.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="(syntactically invalid, returns none) if - 2 invalid parameters - expression instead of wildcard">42</id><querystr><![CDATA[if ifs; Select BOOLEAN pattern ifs (_, "x", _"X"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="(syntactically invalid, returns none) if - 1 invalid parameter - expression instead of wildcard">43</id><querystr><![CDATA[if ifs; Select BOOLEAN pattern ifs (_, "x", _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="(syntactically invalid, returns none) if - 1 invalid parameter - expression instead of wildcard">44</id><querystr><![CDATA[if ifs; Select BOOLEAN pattern ifs (_, _, "X")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>58.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="(syntactically invalid, returns none) if - too little synonyms">45</id><querystr><![CDATA[if ifs; variable v; Select BOOLEAN pattern ifs (v, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="3" Pattern="1" CondNum="5" RelNum="0" comment="(syntactically invalid, returns none) if - too many synonyms">46</id><querystr><![CDATA[if ifs; variable v; Select BOOLEAN pattern ifs (v, _, _, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>54.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="(syntactically invalid, returns none) while - invalid expression - expression instead of wildcard">47</id><querystr><![CDATA[while w; Select BOOLEAN pattern w (_, "x")]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="(syntactically invalid, returns none) while - invalid expression - expression instead of wildcard">48</id><querystr><![CDATA[while w; Select BOOLEAN pattern w (_, _"x"_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>49.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" Pattern="1" CondNum="2" RelNum="0" comment="(syntactically invalid, returns none) while - too little synonyms">49</id><querystr><![CDATA[while w; variable v; Select BOOLEAN pattern w (v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>77.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" Pattern="1" CondNum="4" RelNum="0" comment="(syntactically invalid, returns none) while - too many synonyms">50</id><querystr><![CDATA[while w; variable v; Select BOOLEAN pattern w (v, _, _)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>79.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" CondNum="3" RelNum="0" comment="(semantically invalid, returns FALSE) assign - invalid assign-type synonym">51</id><querystr><![CDATA[variable a; Select BOOLEAN Pattern a (_, _)]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>59.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" CondNum="2" RelNum="0" comment="(semantically invalid, returns FALSE) assign - invalid variable-type synonym">52</id><querystr><![CDATA[assign a; procedure v; Select BOOLEAN Pattern a (v, _)]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>61.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" CondNum="2" RelNum="0" comment="(semantically invalid, returns FALSE) assign - invalid assign-type and variable-type">53</id><querystr><![CDATA[assign v; variable a; Select BOOLEAN Pattern a (v, _)]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>55.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="3" CondNum="4" RelNum="0" comment="(semantically invalid, returns FALSE) if - invalid if-type synonym">54</id><querystr><![CDATA[variable ifs; Select BOOLEAN Pattern ifs (_, _, _)]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>54.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" CondNum="3" RelNum="0" comment="(semantically invalid, returns FALSE) if - invalid variable-type synonym">55</id><querystr><![CDATA[if ifs; procedure v; Select BOOLEAN Pattern ifs (v, _, _)]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>51.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" CondNum="3" RelNum="0" comment="(semantically invalid, returns FALSE) if - invalid if-type and variable-type synonyms">56</id><querystr><![CDATA[if v; variable ifs; Select BOOLEAN Pattern ifs (v, _, _)]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>49.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="2" CondNum="3" RelNum="0" comment="(semantically invalid, returns FALSE) while - invalid while-type synonym">57</id><querystr><![CDATA[variable w; Select BOOLEAN Pattern w (_, _)]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>52.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" CondNum="2" RelNum="0" comment="(semantically invalid, returns FALSE) while - invalid variable-type synonym">58</id><querystr><![CDATA[while w; procedure v; Select BOOLEAN Pattern w (v, _)]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>47.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnBoolean="1" UnnamedVar="1" CondNum="2" RelNum="0" comment="(semantically invalid, returns FALSE) while - invalid while-type and variable-type synonyms">59</id><querystr><![CDATA[while v; variable w; Select BOOLEAN Pattern w (v, _)]]></querystr>
+<stuans></stuans>
+<correct>FALSE</correct>
+<time_taken>49.000000</time_taken>
+<failed>
+<missing>FALSE</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+</queries>
+</test_results>

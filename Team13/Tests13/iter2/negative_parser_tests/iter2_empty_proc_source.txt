@@ -1,0 +1,4 @@
+procedure why {
+	while ( x< y) {
+	}
+}

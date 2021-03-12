@@ -1,0 +1,107 @@
+procedure Affects { a = 1;
+  b = 2;
+  c = 3; 
+  d = 4;
+  e = 5;
+  f = 6;
+  g = 7;
+  h = 8;
+  i = 9;
+  j = 10;
+  if (a == 0) then {
+    a = 1;
+    b = 2;
+    c = 3;
+    if (a == 0) then {
+      d = 4;
+      e = 5;
+      f = 6;
+    } else { d = 4;
+      e = 5;
+      f = 6; }
+  } else { b = c; }
+  varFirst = a + b + c + d + e + f;
+  call ModifiesABCDEF;
+  var = a + b + c + d + e + f;
+  if (a == b) then {
+    call ModifiesABCDEF;
+  } else { call ModifiesGHIJ;}
+  var = a + b + c + d + e + f;
+  read var;
+  var = var;
+  a = var;
+  b = a + var;
+  var = var;
+  var = var;
+  var = var;
+  while (var == var) {
+    rose = flower;
+    if (var == var) then {
+      flower = var + 12;
+    } else { while (var == var) {
+       var = flower + var; } } } }
+procedure ModifiesABCDEF { print b;
+  while (a == 0) {
+    if ((b + c) == d) then {
+      call notRelevant; } else {
+      call ModifiesABC; } }
+  if (b == 1) then {
+    f = 123; } else {
+    if (b == 12) then {
+      print c; } else {
+      if (b == 123) then {
+        print d; } else {
+        if (b == 1234) then {
+          print e;
+          if (b == 12345) then {
+            print f; } else {
+            call ModifiesCDE; } } else {
+          f = a + b + c + d + e; } } } } }
+procedure ModifiesABC {
+  if ((5 == 5) && (666 == 666)) then {
+    print a;
+    read a; } else {
+    print b;
+    read b;
+    call ModifiesCDE; }
+  while (1 == 1) {
+    print a; } }
+
+procedure ModifiesCDE {
+  if (d == e) then {
+     c = getModified;
+  } else {
+    print c;
+  }
+  while (d == e) {
+    d = d + e;
+  }
+  if (d == e) then {
+    call ModifiesE;
+  } else {
+    print d;
+  }
+}
+
+procedure ModifiesE {
+  read e;
+}
+
+procedure ModifiesGHIJ {
+  while (p == q) {
+    g = h;
+    h = i;
+    i = j;
+    j = g;
+  }
+}
+
+procedure notRelevant { while (hasOat == false) {
+		print wantRumChocolate;
+		rain = false;
+		if (wantRumChocolate == hasOat) then {
+			maxx = 1;
+			while ((maxx >= wantRumChocolate) && (nestle == happy + nest)) {
+				rain = maxx; }
+		} else { coffee = sad;
+			solitude = happy; } } } 

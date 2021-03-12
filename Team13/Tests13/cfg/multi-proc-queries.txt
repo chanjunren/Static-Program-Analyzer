@@ -1,0 +1,5 @@
+1 - Select next
+assign a;
+Select a such that Next(_, a)
+
+5000

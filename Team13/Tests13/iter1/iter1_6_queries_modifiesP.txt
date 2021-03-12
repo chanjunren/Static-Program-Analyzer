@@ -1,0 +1,40 @@
+22- valid query Find variable with Modifies procedure
+procedure p; variable v;
+Select v such that Modifies("procD", v)
+dA, dAAA
+5000
+23 - valid query Find procedure with Modifies procedure 
+procedure p; variable v;
+Select p such that Modifies(p, v)
+ifA, ifInIf, procA, procB, procC, procD, withTest
+5000
+24 - valid query Find variable with Modifies procedure 
+procedure p; variable v;
+Select v such that Modifies(p, v)
+a, b, bA, bD, c, dA, dAAA, file, ifA, ifB, ifVar, k, n, procC, uniA, uniC, x, y, z
+5000
+25 - valid query Find variable with Modifies 'procedure'
+variable v;
+Select v such that Modifies("procB", v)
+bA, bD, dA, dAAA, file, k, uniA, x, y, z
+5000
+26 - valid query Find call with Modifies call variable 
+call c; variable v;
+Select c such that Modifies(c, v)
+29, 3, 37, 45
+5000
+27 - valid query Find call with Modifies call 'variable'
+call c;
+Select c such that Modifies(c, "dAAA")
+29, 3, 37
+5000
+28 - valid query Find no results boolean
+assign a;
+Select BOOLEAN such that Modifies(a, "nonexistent")
+FALSE
+5000
+29 - valid query Find results boolean
+assign a;
+Select BOOLEAN such that Modifies(a, "b")
+TRUE
+5000

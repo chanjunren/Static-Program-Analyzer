@@ -1,0 +1,9 @@
+procedure RecursiveAgain {
+	x = 1;
+	call RecursiveAgain;
+	x = 2;	
+}
+
+procedure Example {
+	x = 1;
+}

@@ -1,0 +1,335 @@
+1 - assign - variable name, partial expression
+assign a1;
+Select a1 pattern a1 ("hungry", _"d"_)
+41,42
+5000
+2 - assign - synonym, partial expression
+assign a1; variable v;
+Select a1 pattern a1 (v, _"d"_)
+37,40,41,42,43,44
+5000
+3 - assign - wildcard, partial expression
+assign a1;
+Select a1 pattern a1 (_, _"d"_)
+37,40,41,42,43,44
+5000
+4 - assign - variable name, full expression
+assign a1;
+Select a1 pattern a1 ("hungry", "breakfast + lunch + dinner")
+37
+5000
+5 - assign - synonym, full expression
+assign a1; variable v;
+Select a1 pattern a1 (v, "breakfast + lunch + dinner")
+37,45
+5000
+6 - assign - wildcard, full expression
+assign a1;
+Select a1 pattern a1 (_, "breakfast + lunch + dinner")
+37,45
+5000
+7 - assign - variable name, wildcard
+assign a1;
+Select a1 pattern a1 ("hungry", _)
+48,43,42,41,37
+5000
+8 - assign - synonym, wildcard
+assign a1; variable v;
+Select a1 pattern a1 (v, _)
+2,3,8,10,12,14,15,16,17,18,19,22,29,30,37,40,41,42,43,44,48
+5000
+9 - assign - wildcard, wildcard
+assign a1;
+Select a1 pattern a1 (_, _)
+2,3,8,10,12,14,15,16,17,18,19,22,29,30,37,40,41,42,43,44,48
+5000
+10 - assign - full tree matching - simple expression
+assign a;
+Select a pattern a (_, "hungry")
+48
+5000
+11 - assign - full tree matching - simple expression with underscore
+assign a;
+Select a pattern a (_, _"hungry"_)
+3
+5000
+12 - assign - full tree matching - complex expression
+assign a;
+Select a pattern a (_, "(a+b)*(a+b)*a+b*a+b/a+b%a+b")
+12
+5000
+13 - assign - full tree matching - complex expression with underscore
+assign a;
+Select a pattern a (_, _"(a+b)*(a+b)*a+b*a+b/a+b%a+b"_)
+12
+5000
+14 - assign - partial tree matching - simple expression
+assign a;
+Select a pattern a (_, _"shine"_)
+2
+5000
+15 - assign - partial tree matching - simple expression
+assign a;
+Select a pattern a (_, _"g * a * 2 * 1"_)
+22
+5000
+16 - assign - partial tree matching - complex expression
+assign a;
+Select a pattern a (_, _"c*d/c%d"_)
+40
+5000
+17 - assign - partial tree matching - complex expression
+assign a;
+Select a pattern a (_, _"(a+b)*(a+b)*a"_)
+12
+5000
+18 - if - variable name
+if ifs;
+Select ifs pattern ifs ("Frodo", _, _)
+25
+5000
+11 - if - synonym
+if ifs; variable v;
+Select ifs pattern ifs (v, _, _)
+25,13,6
+5000
+12 - if - wildcard
+if ifs;
+Select ifs pattern ifs (_, _, _)
+25,13,6
+5000
+13 - while - variable name
+while w;
+Select w pattern w ("lunch", _)
+36
+5000
+14 - while - synonym
+while w; variable v;
+Select w pattern w (v, _)
+36,32,20
+5000
+15 - pattern - while - wildcard
+while w;
+Select w pattern w (_, _)
+36,32,20
+5000
+16 - (valid, returns none) assign - variable name, partial expression
+assign a1;
+Select a1 pattern a1 ("Gandalf", _"d"_)
+none
+5000
+17 - (valid, returns none) assign - synonym, partial expression
+assign a1; variable v;
+Select a1 pattern a1 (v, _"GandalfisFood"_)
+none
+5000
+18 - (valid, returns none) assign - wildcard, partial expression
+assign a1;
+Select a1 pattern a1 (_, _"GandalfisFood"_)
+none
+5000
+19 - (valid, returns none) assign - variable name, full expression
+assign a1;
+Select a1 pattern a1 ("hungry", "breakfast + lunch + dinner + supper")
+none
+5000
+20 - (valid, returns none) assign - synonym, full expression
+assign a1; variable v;
+Select a1 pattern a1 (v, "breakfast + lunch + dinner + supper")
+none
+5000
+21 - (valid, returns none) assign - wildcard, full expression
+assign a1;
+Select a1 pattern a1 (_, "breakfast + lunch + dinner + supper")
+none
+5000
+22 - (valid, returns none) assign - variable name, wildcard
+assign a1;
+Select a1 pattern a1 ("a", _)
+none
+5000
+23 - (valid, returns none) assign - full tree matching - simple expression
+assign a;
+Select a pattern a (_, "hungrier")
+none
+5000
+24 - (valid, returns none) assign - full tree matching - simple expression with underscore
+assign a;
+Select a pattern a (_, _"hungrier"_)
+none
+5000
+25 - (valid, returns none) assign - full tree matching - complex expression
+assign a;
+Select a pattern a (_, "(a+b)*(a+b)*a+b*a+b/a+b%a+b+1+1+1+1+1")
+none
+5000
+26 - (valid, returns none) assign - full tree matching - complex expression with underscore
+assign a;
+Select a pattern a (_, _"(a+b)*(a+b)*a+b*a+b/a+b%a+b+1+1+1+1+1"_)
+none
+5000
+27 - (valid, returns none) assign - partial tree matching - simple expression
+assign a;
+Select a pattern a (_, _"Foodie"_)
+none
+5000
+28 - (valid, returns none) assign - partial tree matching - simple expression
+assign a;
+Select a pattern a (_, _"ring + 4"_)
+none
+5000
+29 - (valid, returns none) assign - partial tree matching - complex expression
+assign a;
+Select a pattern a (_, _"((shine * 6 % ring) + help) / (9 + 32)"_)
+none
+5000
+30 - (valid, returns none) assign - partial tree matching - complex expression
+assign a;
+Select a pattern a (_, _"(a/b)/(a/b)/a/b/a/b/a/b/a/b"_)
+none
+5000
+31 - (valid, returns none) assign - partial tree matching - simple expression - no tree match (but string match)
+assign a;
+Select a pattern a (_, _"c+d-c"_)
+none
+5000
+32 - (valid, returns none) assign - partial tree matching - complex expression - no tree match (but string match)
+assign a;
+Select a pattern a (_, _"a+b/a+b%a+b"_)
+none
+5000
+33 - (valid, returns none) if - variable name
+if ifs;
+Select ifs pattern ifs ("carrotCake", _, _)
+none
+5000
+34 - (valid, returns none) - while - variable name
+while w;
+Select w pattern w ("supper", _)
+none
+5000
+35 - (syntactically invalid, returns none) invalid permutation of the word pattern - patterN
+assign a;
+Select BOOLEAN patterN a (_, _)
+none
+5000
+36 - (syntactically invalid, returns none) invalid permutation of the word pattern - patterns
+assign a;
+Select BOOLEAN patterns a (_, _)
+none
+5000
+37 - (syntactically invalid, returns none) assign - invalid expression - synonym instead of expression
+assign a;
+Select BOOLEAN Pattern a (_, a)
+none
+5000
+38 - (syntactically invalid, returns none) assign - invalid expression - # of open brackets != # of close brackets
+assign a;
+Select BOOLEAN Pattern a (_, "(a+b))))))))*((((((((((((a+b)")
+none
+5000
+39 - (syntactically invalid, returns none) assign - invalid expression - no operator in between synonyms
+assign a;
+Select BOOLEAN Pattern a (_, "(a+b)(a+b)")
+none
+5000
+40 - (syntactically invalid, returns none) assign - too little synonyms
+assign a; variable v;
+Select BOOLEAN pattern a (v)
+none
+5000
+41 - (syntactically invalid, returns none) assign - too many synonyms
+assign a; variable v;
+Select BOOLEAN pattern a (v, _, "x")
+none
+5000
+42 - (syntactically invalid, returns none) if - 2 invalid parameters - expression instead of wildcard
+if ifs;
+Select BOOLEAN pattern ifs (_, "x", _"X"_)
+none
+5000
+43 - (syntactically invalid, returns none) if - 1 invalid parameter - expression instead of wildcard
+if ifs;
+Select BOOLEAN pattern ifs (_, "x", _)
+none
+5000
+44 - (syntactically invalid, returns none) if - 1 invalid parameter - expression instead of wildcard
+if ifs;
+Select BOOLEAN pattern ifs (_, _, "X")
+none
+5000
+45 - (syntactically invalid, returns none) if - too little synonyms
+if ifs; variable v;
+Select BOOLEAN pattern ifs (v, _)
+none
+5000
+46 - (syntactically invalid, returns none) if - too many synonyms
+if ifs; variable v;
+Select BOOLEAN pattern ifs (v, _, _, _)
+none
+5000
+47 - (syntactically invalid, returns none) while - invalid expression - expression instead of wildcard
+while w;
+Select BOOLEAN pattern w (_, "x")
+none
+5000
+48 - (syntactically invalid, returns none) while - invalid expression - expression instead of wildcard
+while w;
+Select BOOLEAN pattern w (_, _"x"_)
+none
+5000
+49 - (syntactically invalid, returns none) while - too little synonyms
+while w; variable v;
+Select BOOLEAN pattern w (v)
+none
+5000
+50 - (syntactically invalid, returns none) while - too many synonyms
+while w; variable v;
+Select BOOLEAN pattern w (v, _, _)
+none
+5000
+51 - (semantically invalid, returns FALSE) assign - invalid assign-type synonym
+variable a;
+Select BOOLEAN Pattern a (_, _)
+FALSE
+5000
+52 - (semantically invalid, returns FALSE) assign - invalid variable-type synonym
+assign a; procedure v;
+Select BOOLEAN Pattern a (v, _)
+FALSE
+5000
+53 - (semantically invalid, returns FALSE) assign - invalid assign-type and variable-type
+assign v; variable a;
+Select BOOLEAN Pattern a (v, _)
+FALSE
+5000
+54 - (semantically invalid, returns FALSE) if - invalid if-type synonym
+variable ifs;
+Select BOOLEAN Pattern ifs (_, _, _)
+FALSE
+5000
+55 - (semantically invalid, returns FALSE) if - invalid variable-type synonym
+if ifs; procedure v;
+Select BOOLEAN Pattern ifs (v, _, _)
+FALSE
+5000
+56 - (semantically invalid, returns FALSE) if - invalid if-type and variable-type synonyms
+if v; variable ifs;
+Select BOOLEAN Pattern ifs (v, _, _)
+FALSE
+5000
+57 - (semantically invalid, returns FALSE) while - invalid while-type synonym
+variable w;
+Select BOOLEAN Pattern w (_, _)
+FALSE
+5000
+58 - (semantically invalid, returns FALSE) while - invalid variable-type synonym
+while w; procedure v;
+Select BOOLEAN Pattern w (v, _)
+FALSE
+5000
+59 - (semantically invalid, returns FALSE) while - invalid while-type and variable-type synonyms
+while v; variable w;
+Select BOOLEAN Pattern w (v, _)
+FALSE
+5000
